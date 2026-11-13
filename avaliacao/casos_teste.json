@@ -1,0 +1,221 @@
+{
+  "descricao": "Conjunto de teste do Tapa Buraco. Cada caso tem a pergunta, o gabarito esperado, palavras-chave para correção automática, os ids dos trechos relevantes da base (para medir recall@1 e recall@3) e o tipo: 'respondivel' ou 'nao_consta'.",
+  "casos": [
+    {
+      "id": "q01",
+      "pergunta": "Caí num buraco com o carro em São Paulo e danifiquei a roda. A prefeitura tem que pagar o conserto?",
+      "gabarito": "Sim, em regra a Prefeitura responde objetivamente pelos danos (CF art. 37 §6º e CTB art. 1º §3º): basta provar o dano, o buraco e o nexo causal, sem precisar provar culpa. O ressarcimento não é automático: é analisado em procedimento administrativo ou judicial.",
+      "palavras_chave": ["objetiva", "nexo"],
+      "trecho_ids": ["cf-01", "ctb-02", "ind-01", "jur-01"],
+      "tipo": "respondivel"
+    },
+    {
+      "id": "q02",
+      "pergunta": "Como eu reporto um buraco na minha rua para a prefeitura de São Paulo?",
+      "gabarito": "Pelos canais SP156: telefone 156, Portal SP156, aplicativo SP156 ou Chat no WhatsApp (11) 3230-5156, solicitando o serviço Tapa-buraco.",
+      "palavras_chave": ["156"],
+      "trecho_ids": ["sp156-01", "sp156-02"],
+      "tipo": "respondivel"
+    },
+    {
+      "id": "q03",
+      "pergunta": "Qual o prazo que eu tenho para pedir indenização da prefeitura depois do acidente com o buraco?",
+      "gabarito": "Até 5 anos a contar do fato, conforme o Decreto 20.910/1932 (prescrição contra a Fazenda Pública).",
+      "palavras_chave": ["5 anos", "cinco anos"],
+      "trecho_ids": ["presc-01"],
+      "tipo": "respondivel"
+    },
+    {
+      "id": "q04",
+      "pergunta": "Quem é responsável por consertar a calçada quebrada em frente à minha casa em São Paulo?",
+      "gabarito": "O responsável pelo imóvel que faz frente à calçada (proprietário, condomínio, possuidor ou locatário), conforme a Lei municipal 15.442/2011. A Prefeitura cuida apenas do meio-fio.",
+      "palavras_chave": ["proprietário", "imóvel"],
+      "trecho_ids": ["calc-01", "calc-02"],
+      "tipo": "respondivel"
+    },
+    {
+      "id": "q05",
+      "pergunta": "Se eu registrar o buraco no SP156, isso já vale como pedido de indenização?",
+      "gabarito": "Não. São procedimentos diferentes: o SP156 serve para informar o problema e pedir o conserto; a indenização é um procedimento administrativo próprio de reparação de danos.",
+      "palavras_chave": ["diferentes", "não"],
+      "trecho_ids": ["ind-03"],
+      "tipo": "respondivel"
+    },
+    {
+      "id": "q06",
+      "pergunta": "Que provas devo guardar logo depois de cair num buraco?",
+      "gabarito": "Fotos do buraco, do dano e da via, além do endereço exato, data e horário da ocorrência.",
+      "palavras_chave": ["fotos", "endereço"],
+      "trecho_ids": ["ind-02"],
+      "tipo": "respondivel"
+    },
+    {
+      "id": "q07",
+      "pergunta": "O buraco fica no corredor de ônibus. Quem faz o conserto?",
+      "gabarito": "Em faixa exclusiva ou corredor de ônibus o conserto é feito pela SPTrans, com pedido registrado pelo SP156.",
+      "palavras_chave": ["SPTrans"],
+      "trecho_ids": ["sp156-03"],
+      "tipo": "respondivel"
+    },
+    {
+      "id": "q08",
+      "pergunta": "Qual é a largura mínima da faixa livre para pedestres na calçada?",
+      "gabarito": "A faixa livre de circulação deve ter no mínimo 1,20 m de largura, sem obstáculos.",
+      "palavras_chave": ["1,20"],
+      "trecho_ids": ["calc-03"],
+      "tipo": "respondivel"
+    },
+    {
+      "id": "q09",
+      "pergunta": "Moro de aluguel. O inquilino também é responsável pela manutenção da calçada?",
+      "gabarito": "Sim. A Lei 15.442/2011 atribui a responsabilidade ao responsável pelo imóvel, o que inclui o possuidor a qualquer título, como o locatário.",
+      "palavras_chave": ["locatário", "sim"],
+      "trecho_ids": ["calc-01"],
+      "tipo": "respondivel"
+    },
+    {
+      "id": "q10",
+      "pergunta": "Onde eu encontro os dados abertos das solicitações do SP156?",
+      "gabarito": "No Portal de Dados Abertos da Prefeitura (dados.prefeitura.sp.gov.br/dataset/dados-do-sp156), com dados desde 2012, e no GeoSampa na camada 'Atendimento ao Cidadão - SP 156'.",
+      "palavras_chave": ["dados abertos", "dados.prefeitura"],
+      "trecho_ids": ["dados-01", "dados-02"],
+      "tipo": "respondivel"
+    },
+    {
+      "id": "q11",
+      "pergunta": "Pedi o tapa-buraco pelo 156 e nada foi feito. A quem posso recorrer?",
+      "gabarito": "À Ouvidoria Geral do Município (vinculada à Controladoria Geral), que recebe reclamações quando a solicitação pelo 156 não é respondida ou resolvida.",
+      "palavras_chave": ["Ouvidoria"],
+      "trecho_ids": ["sp156-06"],
+      "tipo": "respondivel"
+    },
+    {
+      "id": "q12",
+      "pergunta": "Mesmo com buraco na pista, posso ficar sem indenização por culpa minha?",
+      "gabarito": "Sim. A culpa exclusiva da vítima afasta a indenização, por exemplo quando o condutor dirige de forma imprudente em via sinalizada ou com obra visível (dever de cautela do CTB art. 26).",
+      "palavras_chave": ["culpa exclusiva", "cautela"],
+      "trecho_ids": ["jur-01", "ctb-04"],
+      "tipo": "respondivel"
+    },
+    {
+      "id": "q13",
+      "pergunta": "Quem tem a obrigação de sinalizar uma obra que abriu um buraco na rua?",
+      "gabarito": "O responsável pela execução da obra, conforme o CTB art. 95 §1º. Obra sem sinalização que cause acidente gera responsabilidade de quem a executa.",
+      "palavras_chave": ["responsável pela execução", "sinaliz"],
+      "trecho_ids": ["ctb-05"],
+      "tipo": "respondivel"
+    },
+    {
+      "id": "q14",
+      "pergunta": "Quais são os canais de atendimento do SP156?",
+      "gabarito": "Central Telefônica 156, Portal SP156, aplicativo SP156 e Chat SP156 no WhatsApp (11) 3230-5156.",
+      "palavras_chave": ["telefone", "portal", "aplicativo", "whatsapp"],
+      "trecho_ids": ["sp156-01"],
+      "tipo": "respondivel"
+    },
+    {
+      "id": "q15",
+      "pergunta": "De quem é a competência de manter o asfalto das ruas da cidade?",
+      "gabarito": "Dos órgãos executivos de trânsito do município: em São Paulo, a Prefeitura (Subprefeituras) é responsável por manter o sistema viário urbano (CTB art. 24).",
+      "palavras_chave": ["município", "prefeitura"],
+      "trecho_ids": ["ctb-03"],
+      "tipo": "respondivel"
+    },
+    {
+      "id": "q16",
+      "pergunta": "O que diz o artigo 37, parágrafo 6º, da Constituição?",
+      "gabarito": "Que as pessoas jurídicas de direito público respondem pelos danos que seus agentes causarem a terceiros: é a responsabilidade objetiva do Estado, que dispensa prova de culpa.",
+      "palavras_chave": ["objetiva", "danos"],
+      "trecho_ids": ["cf-01"],
+      "tipo": "respondivel"
+    },
+    {
+      "id": "q17",
+      "pergunta": "Tem uma caçamba de entulho bloqueando a calçada da minha rua. O que eu faço?",
+      "gabarito": "Reporte pelos canais SP156: a Subprefeitura aciona a remoção do entulho ou a fiscalização da caçamba irregular.",
+      "palavras_chave": ["156"],
+      "trecho_ids": ["calc-05", "sp156-08"],
+      "tipo": "respondivel"
+    },
+    {
+      "id": "q18",
+      "pergunta": "A prefeitura de São Paulo conserta a calçada inteira ou só o meio-fio?",
+      "gabarito": "Em regra, apenas o meio-fio. A calçada é responsabilidade do responsável pelo imóvel, conforme a Lei 15.442/2011 e o Decreto 59.671/2020.",
+      "palavras_chave": ["meio-fio"],
+      "trecho_ids": ["calc-02"],
+      "tipo": "respondivel"
+    },
+    {
+      "id": "q19",
+      "pergunta": "Como acompanho o andamento da minha solicitação de tapa-buraco?",
+      "gabarito": "Pelo número de protocolo, na aba 'Acompanhe sua solicitação' do Portal SP156, em 'Minhas Solicitações' no aplicativo, ou pelo Chat SP156 no WhatsApp.",
+      "palavras_chave": ["protocolo"],
+      "trecho_ids": ["sp156-04"],
+      "tipo": "respondivel"
+    },
+    {
+      "id": "q20",
+      "pergunta": "Quais documentos preciso juntar para pedir a indenização administrativa?",
+      "gabarito": "Documento de identidade e CPF, CRLV do veículo, CNH do condutor, boletim de ocorrência, fotos do local e do dano, e orçamentos ou notas fiscais do conserto.",
+      "palavras_chave": ["boletim", "orçamento"],
+      "trecho_ids": ["ind-04"],
+      "tipo": "respondivel"
+    },
+    {
+      "id": "q21",
+      "pergunta": "Por que buraco é um risco maior para quem anda de moto ou bicicleta?",
+      "gabarito": "Porque o desvio brusco pode causar colisão e a queda é mais provável; a recomendação é reduzir a velocidade, manter distância e reportar pelo 156.",
+      "palavras_chave": ["desvi", "velocidade"],
+      "trecho_ids": ["mob-01"],
+      "tipo": "respondivel"
+    },
+    {
+      "id": "q22",
+      "pergunta": "Um app de relatos de buraco precisa guardar o CPF de quem reporta?",
+      "gabarito": "Não. Pela LGPD vale o princípio da minimização: para o reparo bastam localização, foto e descrição do problema; dados pessoais do solicitante devem ser protegidos e não expostos.",
+      "palavras_chave": ["minimiza", "LGPD", "não"],
+      "trecho_ids": ["lgpd-01"],
+      "tipo": "respondivel"
+    },
+    {
+      "id": "q23",
+      "pergunta": "Quantos buracos foram tapados na Avenida Paulista em 2025?",
+      "gabarito": "não consta",
+      "palavras_chave": [],
+      "trecho_ids": [],
+      "tipo": "nao_consta"
+    },
+    {
+      "id": "q24",
+      "pergunta": "Qual é o valor médio das indenizações que a prefeitura de São Paulo paga por danos de buraco?",
+      "gabarito": "não consta",
+      "palavras_chave": [],
+      "trecho_ids": [],
+      "tipo": "nao_consta"
+    },
+    {
+      "id": "q25",
+      "pergunta": "Qual o telefone direto do subprefeito da Sé?",
+      "gabarito": "não consta",
+      "palavras_chave": [],
+      "trecho_ids": [],
+      "tipo": "nao_consta"
+    },
+    {
+      "id": "q26",
+      "pergunta": "A prefeitura empresta um carro reserva enquanto o meu está no conserto por causa do buraco?",
+      "gabarito": "não consta",
+      "palavras_chave": [],
+      "trecho_ids": [],
+      "tipo": "nao_consta"
+    },
+    {
+      "id": "q27",
+      "pergunta": "Qual tipo de massa asfáltica é usada na operação tapa-buraco de São Paulo?",
+      "gabarito": "não consta",
+      "palavras_chave": [],
+      "trecho_ids": [],
+      "tipo": "nao_consta"
+    }
+  ]
+}

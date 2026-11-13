@@ -1,0 +1,221 @@
+{
+  "descricao": "Base de conhecimento do Tapa Buraco: trechos curtos e autocontidos sobre buracos, obstáculos em vias e calçadas, reporte via SP156 e indenização, no município de São Paulo. Cada trecho tem id e fonte.",
+  "trechos": [
+    {
+      "id": "ctb-01",
+      "fonte": "Lei Federal 9.503/1997 (CTB), art. 1º, §2º",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+      "texto": "O trânsito, em condições seguras, é um direito de todos e um dever dos órgãos e entidades que compõem o Sistema Nacional de Trânsito. Cabe a esses órgãos, cada um na sua competência, adotar as medidas necessárias para garantir esse direito."
+    },
+    {
+      "id": "ctb-02",
+      "fonte": "Lei Federal 9.503/1997 (CTB), art. 1º, §3º",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+      "texto": "Os órgãos e entidades de trânsito respondem objetivamente, no âmbito das respectivas competências, por danos causados aos cidadãos em razão de ação, omissão ou erro na execução e manutenção de programas, projetos e serviços que garantam o trânsito seguro. Isso inclui danos causados por má conservação da via, como buracos."
+    },
+    {
+      "id": "ctb-03",
+      "fonte": "Lei Federal 9.503/1997 (CTB), art. 24",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+      "texto": "Compete aos órgãos executivos de trânsito dos municípios planejar, projetar, regulamentar, operar e manter o sistema viário das vias urbanas. Ou seja: manter o asfalto e o pavimento das ruas da cidade em bom estado é competência do município — em São Paulo, da Prefeitura, por meio das Subprefeituras."
+    },
+    {
+      "id": "ctb-04",
+      "fonte": "Lei Federal 9.503/1997 (CTB), art. 26",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+      "texto": "Os condutores devem se comportar de forma a não causar perigo, conduzindo com cuidado e atenção. Esse dever de cautela é usado pela Justiça para avaliar se houve culpa exclusiva ou concorrente da vítima no acidente com buraco: quem dirige de forma imprudente em via sabidamente em obras ou bem sinalizada pode ficar sem indenização por culpa própria."
+    },
+    {
+      "id": "ctb-05",
+      "fonte": "Lei Federal 9.503/1997 (CTB), art. 95, §1º",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm",
+      "texto": "Nenhuma obra ou evento pode perturbar ou interromper a livre circulação sem permissão prévia do órgão de trânsito, e a obrigação de sinalizar a obra na via é do responsável pela sua execução. Obra sem sinalização adequada que cause acidente gera responsabilidade de quem a executa."
+    },
+    {
+      "id": "cf-01",
+      "fonte": "Constituição Federal de 1988, art. 37, §6º",
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+      "texto": "As pessoas jurídicas de direito público respondem pelos danos que seus agentes, nessa qualidade, causarem a terceiros. É a responsabilidade objetiva do Estado (teoria do risco administrativo): o cidadão não precisa provar culpa da Administração, basta demonstrar o dano, o fato e o nexo causal entre eles. No caso de dano causado por buraco em via municipal, quem responde é a Prefeitura."
+    },
+    {
+      "id": "jur-01",
+      "fonte": "Jurisprudência consolidada (ex.: TJMT, TJBA, TJDFT) sobre buracos em via pública",
+      "url": "https://www.tjdft.jus.br/",
+      "texto": "Os tribunais reconhecem o dever do município de indenizar — ou seja, a Prefeitura pode ter que pagar o conserto do carro ou da moto — quando o dano foi causado por buraco em via pública mal conservada, com base no art. 37, §6º, da CF. Porém a indenização exige comprovação do nexo causal, e a culpa exclusiva da vítima (por exemplo, imprudência em via sinalizada e com obra visível) afasta o dever de indenizar."
+    },
+    {
+      "id": "cc-01",
+      "fonte": "Código Civil (Lei 10.406/2002), arts. 186 e 927",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+      "texto": "Quem, por ação ou omissão voluntária, negligência ou imprudência, violar direito e causar dano a outrem comete ato ilícito e fica obrigado a repará-lo. Esses artigos fundamentam o pedido de reparação de danos materiais e morais causados por buracos e obstáculos."
+    },
+    {
+      "id": "presc-01",
+      "fonte": "Decreto Federal 20.910/1932, art. 1º",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto/antigos/d20910.htm",
+      "texto": "As ações contra a Fazenda Pública (União, Estados e Municípios) prescrevem em 5 (cinco) anos contados do fato. Portanto, o prazo para pedir indenização da Prefeitura por dano causado por buraco é de até 5 anos a partir da data do acidente."
+    },
+    {
+      "id": "ind-01",
+      "fonte": "Prefeitura de São Paulo - pedido administrativo de indenização (reparação de danos)",
+      "url": "https://sp156.prefeitura.sp.gov.br/portal/servicos",
+      "texto": "Quem teve um bem danificado por problema relacionado a um serviço público municipal (como um buraco na via) pode pedir indenização à Prefeitura de São Paulo por meio de um procedimento administrativo de reparação de danos, sem precisar ir à Justiça. Ter um prejuízo em via pública não garante automaticamente o ressarcimento: o pedido é analisado caso a caso."
+    },
+    {
+      "id": "ind-02",
+      "fonte": "Prefeitura de São Paulo - orientações para reparação de danos",
+      "url": "https://sp156.prefeitura.sp.gov.br/portal/servicos",
+      "texto": "Logo após o acidente com buraco, registre as provas: tire fotos do buraco, do dano no veículo e da via, e anote o endereço exato, a data e o horário da ocorrência. Essas evidências são essenciais para comprovar o nexo causal no pedido de indenização."
+    },
+    {
+      "id": "ind-03",
+      "fonte": "Prefeitura de São Paulo - diferença entre reporte no SP156 e pedido de indenização",
+      "url": "https://sp156.prefeitura.sp.gov.br/portal/servicos",
+      "texto": "Informar um buraco pelo SP156 e pedir indenização são procedimentos diferentes. O registro no SP156 serve para informar o problema e solicitar o conserto pela Prefeitura; o pedido de indenização é um procedimento administrativo próprio, com análise de documentos e provas."
+    },
+    {
+      "id": "ind-04",
+      "fonte": "Prefeitura de São Paulo - documentos usuais no pedido de reparação de danos",
+      "url": "https://sp156.prefeitura.sp.gov.br/portal/servicos",
+      "texto": "Os documentos que o cidadão precisa juntar no pedido administrativo de indenização costumam ser: documento de identidade e CPF, documento do veículo (CRLV) e CNH do condutor, boletim de ocorrência relatando o acidente, fotos do local e do dano, e orçamentos ou notas fiscais do conserto."
+    },
+    {
+      "id": "ind-05",
+      "fonte": "Via judicial - Juizado Especial da Fazenda Pública",
+      "url": "https://www.tjsp.jus.br/",
+      "texto": "Se o pedido administrativo for negado ou demorar, o cidadão pode acionar a Justiça. Para causas de menor valor contra o município existe o Juizado Especial da Fazenda Pública, que dispensa advogado em causas de até 20 salários mínimos. A responsabilidade do município é objetiva, mas o nexo causal entre o buraco e o dano precisa ser comprovado."
+    },
+    {
+      "id": "sp156-01",
+      "fonte": "Prefeitura de São Paulo - canais de atendimento SP156",
+      "url": "https://sp156.prefeitura.sp.gov.br/",
+      "texto": "Os canais oficiais de atendimento da Prefeitura de São Paulo são: Central Telefônica 156 (ligação), Portal SP156 (sp156.prefeitura.sp.gov.br), aplicativo SP156 para celular e o Chat SP156 no WhatsApp pelo número (11) 3230-5156. Por eles o cidadão solicita serviços de zeladoria, como tapa-buraco."
+    },
+    {
+      "id": "sp156-02",
+      "fonte": "Carta de Serviços SP156 - serviço Tapa-buraco (Subprefeituras/SMSUB)",
+      "url": "https://sp156.prefeitura.sp.gov.br/portal/servicos",
+      "texto": "O serviço Tapa-buraco deve ser solicitado quando o cidadão identificar um buraco no asfalto que precise ser tapado para evitar acidentes ou danos a veículos. O órgão responsável pela execução é a Subprefeitura da região (Secretaria Municipal das Subprefeituras - SMSUB). O prazo máximo de atendimento consta na Carta de Serviços de cada serviço no Portal SP156."
+    },
+    {
+      "id": "sp156-03",
+      "fonte": "Carta de Serviços SP156 - Tapa-buraco em faixa exclusiva ou corredor de ônibus",
+      "url": "https://sp156.prefeitura.sp.gov.br/portal/servicos",
+      "texto": "Quando o buraco está no asfalto de faixa exclusiva ou corredor de ônibus, o conserto é feito pela SPTrans, e não pela Subprefeitura. O pedido também é registrado pelos canais SP156."
+    },
+    {
+      "id": "sp156-04",
+      "fonte": "Portal SP156 - acompanhamento de solicitações",
+      "url": "https://sp156.prefeitura.sp.gov.br/",
+      "texto": "Toda solicitação registrada no SP156 gera um número de protocolo. O andamento pode ser acompanhado na aba 'Acompanhe sua solicitação' do Portal SP156 (com login), em 'Minhas Solicitações' no aplicativo, ou pelo Chat SP156 no WhatsApp."
+    },
+    {
+      "id": "sp156-05",
+      "fonte": "Carta de Serviços ao Cidadão - Portal SP156",
+      "url": "https://sp156.prefeitura.sp.gov.br/portal/servicos",
+      "texto": "A Carta de Serviços reúne as informações oficiais de cada serviço municipal: quando solicitar, público-alvo, requisitos, documentos e informações necessárias, prazo máximo para atendimento, taxas (se houver), canais para solicitar, principais etapas, legislação e órgão responsável."
+    },
+    {
+      "id": "sp156-06",
+      "fonte": "Ouvidoria Geral do Município de São Paulo (CGM)",
+      "url": "https://www.prefeitura.sp.gov.br/cidade/secretarias/controladoria_geral/ouvidoria/",
+      "texto": "Se a solicitação feita pelo 156 não for respondida, não for atendida ou nada for feito, o munícipe pode recorrer à Ouvidoria Geral do Município, órgão vinculado à Controladoria Geral do Município (CGM), que registra reclamações sobre a qualidade do atendimento e dos serviços."
+    },
+    {
+      "id": "sp156-07",
+      "fonte": "Lei Federal 13.460/2017 (Código de Defesa do Usuário do Serviço Público)",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13460.htm",
+      "texto": "A Lei 13.460/2017 garante direitos ao usuário de serviços públicos: atendimento com qualidade, informação clara, e a existência de uma Carta de Serviços ao Usuário informando formas de acesso, compromissos e padrões de qualidade. É a base legal do Portal SP156."
+    },
+    {
+      "id": "sp156-08",
+      "fonte": "Carta de Serviços SP156 - serviços de zeladoria relacionados",
+      "url": "https://sp156.prefeitura.sp.gov.br/portal/servicos",
+      "texto": "Além do tapa-buraco, o SP156 recebe pedidos de zeladoria relacionados à via: recapeamento de rua, limpeza de bueiros e bocas de lobo, remoção de entulho e grandes objetos da via pública, remoção de veículo abandonado e manutenção de ponto de ônibus."
+    },
+    {
+      "id": "sp156-09",
+      "fonte": "Relatórios da Ouvidoria Geral do Município de São Paulo",
+      "url": "https://www.prefeitura.sp.gov.br/cidade/secretarias/controladoria_geral/ouvidoria/",
+      "texto": "'Buraco e Pavimentação' aparece sistematicamente entre os temas com mais manifestações nos relatórios mensais da Ouvidoria Geral do Município de São Paulo, junto com temas como árvores, ônibus e veículos abandonados, mostrando que é um dos principais problemas de zeladoria da cidade."
+    },
+    {
+      "id": "calc-01",
+      "fonte": "Lei Municipal de São Paulo 15.442/2011, art. 10",
+      "url": "https://www.saopaulo.sp.leg.br/iah/fulltext/leis/L15442.pdf",
+      "texto": "Em São Paulo, a construção, conservação e manutenção da calçada (passeio público) são responsabilidade do responsável pelo imóvel que faz frente a ela: o proprietário, o titular do domínio útil, o condomínio ou o possuidor a qualquer título, o que inclui o locatário (inquilino). Quem não mantém a calçada em bom estado pode ser notificado e multado pela Subprefeitura."
+    },
+    {
+      "id": "calc-02",
+      "fonte": "Prefeitura de São Paulo - Lei 15.442/2011 e Decreto 59.671/2020",
+      "url": "https://www.legisweb.com.br/legislacao/?id=399749",
+      "texto": "À Prefeitura de São Paulo cabe a manutenção do meio-fio (a faixa que separa a via pública da calçada), enquanto a calçada em si é do responsável pelo imóvel. O Decreto 59.671/2020 consolida os critérios de padronização das calçadas do município (materiais, faixas e requisitos técnicos)."
+    },
+    {
+      "id": "calc-03",
+      "fonte": "Padrão de calçadas de São Paulo (Decreto 59.671/2020 / NBR 9050)",
+      "url": "https://www.legisweb.com.br/legislacao/?id=399749",
+      "texto": "As calçadas devem garantir uma faixa livre de circulação de pedestres com largura mínima de 1,20 m, sem obstáculos, degraus ou buracos. Mobiliário urbano, lixeiras e vegetação devem ficar fora da faixa livre."
+    },
+    {
+      "id": "calc-04",
+      "fonte": "SP156 - serviço de fiscalização de calçadas irregulares",
+      "url": "https://sp156.prefeitura.sp.gov.br/portal/servicos",
+      "texto": "Calçadas quebradas, irregulares ou com buracos podem ser denunciadas pelos canais SP156. A Subprefeitura fiscaliza, notifica o responsável pelo imóvel para reparar e pode aplicar multa em caso de descumprimento."
+    },
+    {
+      "id": "calc-05",
+      "fonte": "SP156 - obstáculos na calçada e na via",
+      "url": "https://sp156.prefeitura.sp.gov.br/portal/servicos",
+      "texto": "Obstáculos que bloqueiam a calçada ou a via, como entulho, caçambas irregulares, grandes objetos descartados ou mobiliário mal posicionado, devem ser reportados pelo SP156, que aciona a remoção ou a fiscalização pela Subprefeitura."
+    },
+    {
+      "id": "acess-01",
+      "fonte": "Lei Federal 13.146/2015 (Lei Brasileira de Inclusão), arts. 3º e 53",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm",
+      "texto": "A acessibilidade é direito da pessoa com deficiência e com mobilidade reduzida. Barreiras urbanísticas, como calçadas esburacadas ou obstruídas, devem ser eliminadas para garantir circulação segura e autônoma. Obras e calçadas devem seguir as normas de acessibilidade (NBR 9050)."
+    },
+    {
+      "id": "dados-01",
+      "fonte": "Portal de Dados Abertos da Prefeitura de São Paulo - dataset SP156",
+      "url": "http://dados.prefeitura.sp.gov.br/dataset/dados-do-sp156",
+      "texto": "O Portal de Dados Abertos da Prefeitura de São Paulo publica os dados das solicitações feitas aos canais SP156 desde 2012, incluindo tema, serviço, data, status e região. Os arquivos podem ser baixados livremente e são a base pública para analisar buracos e zeladoria na cidade."
+    },
+    {
+      "id": "dados-02",
+      "fonte": "GeoSampa - camada Atendimento ao Cidadão SP156",
+      "url": "https://geosampa.prefeitura.sp.gov.br/",
+      "texto": "O GeoSampa, mapa digital oficial da cidade, exibe de forma georreferenciada as solicitações dos canais SP156 (camada 'Atendimento ao Cidadão - SP 156'), com endereço e status de cada pedido. Os dados da camada também estão disponíveis para download."
+    },
+    {
+      "id": "dados-03",
+      "fonte": "Perguntas Frequentes SP156 - Secretaria Municipal de Inovação e Tecnologia",
+      "url": "https://prefeitura.sp.gov.br/web/inovacao/w/acesso_a_informacao/350229",
+      "texto": "Os canais de atendimento SP156 recebem em média cerca de 157 mil solicitações por mês (média de 2022). O volume de solicitações pode ser acompanhado publicamente pelo Portal de Dados Abertos."
+    },
+    {
+      "id": "ilum-01",
+      "fonte": "SP156 - iluminação pública e segurança viária",
+      "url": "https://sp156.prefeitura.sp.gov.br/portal/servicos",
+      "texto": "Problemas de iluminação pública (lâmpada apagada, piscando ou poste danificado) em São Paulo são reportados pelos canais SP156. Vias mal iluminadas aumentam o risco de não enxergar buracos e obstáculos à noite, afetando a segurança de motoristas, ciclistas e pedestres."
+    },
+    {
+      "id": "mob-01",
+      "fonte": "Orientações de segurança viária sobre buracos (Portal do Trânsito / órgãos de trânsito)",
+      "url": "https://www.portaldotransito.com.br/",
+      "texto": "Buraco na pista é um risco maior para quem anda de moto ou de bicicleta: motociclistas e ciclistas podem cair ou colidir ao desviar bruscamente. A recomendação é reduzir a velocidade, manter distância do veículo da frente, evitar frenagens bruscas sobre o buraco e reportar o problema pelo 156."
+    },
+    {
+      "id": "lgpd-01",
+      "fonte": "Lei Federal 13.709/2018 (LGPD), arts. 6º e 7º",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
+      "texto": "O tratamento de dados pessoais deve ter finalidade específica e se limitar ao mínimo necessário (princípio da minimização). Um aplicativo ou sistema de relatos de zeladoria não precisa guardar CPF nem outros dados pessoais de quem reporta: bastam a localização do problema, a foto e a descrição; os dados do solicitante devem ser protegidos e não são necessários para o reparo em si."
+    },
+    {
+      "id": "lgpd-02",
+      "fonte": "Boas práticas LGPD para relatos com foto em via pública",
+      "url": "https://www.gov.br/anpd/pt-br",
+      "texto": "Fotos de buracos e obstáculos em via pública devem, sempre que possível, evitar enquadrar rostos de pessoas e placas de veículos. Se coletados, esses dados devem ser mascarados ou borrados antes de publicação, e o nome e contato do solicitante não devem ser expostos publicamente."
+    }
+  ]
+}

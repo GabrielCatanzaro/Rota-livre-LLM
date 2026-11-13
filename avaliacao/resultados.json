@@ -1,0 +1,1781 @@
+{
+  "sem_contexto": {
+    "metricas": {
+      "config": "sem_contexto",
+      "acuracia": 0.259,
+      "alucinacao": 0.2,
+      "json_valido": 1.0,
+      "citacao_correta": 0.0,
+      "tempo_medio_s": 2.6
+    },
+    "execucoes": [
+      {
+        "config": "sem_contexto",
+        "pergunta": "Caí num buraco com o carro em São Paulo e danifiquei a roda. A prefeitura tem que pagar o conserto?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": null, \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": null,
+          "confianca": 0.0
+        },
+        "trechos_usados": [],
+        "passos": [
+          "pergunta direta ao modelo, sem contexto"
+        ],
+        "caso_id": "q01",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 2.5
+      },
+      {
+        "config": "sem_contexto",
+        "pergunta": "Como eu reporto um buraco na minha rua para a prefeitura de São Paulo?",
+        "saida_bruta": "{\"resposta\": \"Você pode reportar um buraco na sua rua através do aplicativo Tapa Buraco, pelo telefone 156 ou pelo site da Prefeitura de São Paulo.\", \"fonte_id\": \"prefeitura_sao_paulo\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "Você pode reportar um buraco na sua rua através do aplicativo Tapa Buraco, pelo telefone 156 ou pelo site da Prefeitura de São Paulo.",
+          "fonte_id": "prefeitura_sao_paulo",
+          "confianca": 0.95
+        },
+        "trechos_usados": [],
+        "passos": [
+          "pergunta direta ao modelo, sem contexto"
+        ],
+        "caso_id": "q02",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 3.2
+      },
+      {
+        "config": "sem_contexto",
+        "pergunta": "Qual o prazo que eu tenho para pedir indenização da prefeitura depois do acidente com o buraco?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": null, \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": null,
+          "confianca": 0.0
+        },
+        "trechos_usados": [],
+        "passos": [
+          "pergunta direta ao modelo, sem contexto"
+        ],
+        "caso_id": "q03",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 2.5
+      },
+      {
+        "config": "sem_contexto",
+        "pergunta": "Quem é responsável por consertar a calçada quebrada em frente à minha casa em São Paulo?",
+        "saida_bruta": "{\"resposta\": \"Tapa Buraco\", \"fonte_id\": 1, \"confianca\": 0.95}",
+        "json": {
+          "resposta": "Tapa Buraco",
+          "fonte_id": 1,
+          "confianca": 0.95
+        },
+        "trechos_usados": [],
+        "passos": [
+          "pergunta direta ao modelo, sem contexto"
+        ],
+        "caso_id": "q04",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 2.5
+      },
+      {
+        "config": "sem_contexto",
+        "pergunta": "Se eu registrar o buraco no SP156, isso já vale como pedido de indenização?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": null, \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": null,
+          "confianca": 0.0
+        },
+        "trechos_usados": [],
+        "passos": [
+          "pergunta direta ao modelo, sem contexto"
+        ],
+        "caso_id": "q05",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 2.5
+      },
+      {
+        "config": "sem_contexto",
+        "pergunta": "Que provas devo guardar logo depois de cair num buraco?",
+        "saida_bruta": "{\"resposta\": \"Imagens do local do acidente, descrição detalhada do ocorrido, número de telefone de testemunhas, e detalhes do seu equipamento de segurança\", \"fonte_id\": \"12345\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "Imagens do local do acidente, descrição detalhada do ocorrido, número de telefone de testemunhas, e detalhes do seu equipamento de segurança",
+          "fonte_id": "12345",
+          "confianca": 0.95
+        },
+        "trechos_usados": [],
+        "passos": [
+          "pergunta direta ao modelo, sem contexto"
+        ],
+        "caso_id": "q06",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 3.0
+      },
+      {
+        "config": "sem_contexto",
+        "pergunta": "O buraco fica no corredor de ônibus. Quem faz o conserto?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": null, \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": null,
+          "confianca": 0.0
+        },
+        "trechos_usados": [],
+        "passos": [
+          "pergunta direta ao modelo, sem contexto"
+        ],
+        "caso_id": "q07",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 2.5
+      },
+      {
+        "config": "sem_contexto",
+        "pergunta": "Qual é a largura mínima da faixa livre para pedestres na calçada?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": null, \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": null,
+          "confianca": 0.0
+        },
+        "trechos_usados": [],
+        "passos": [
+          "pergunta direta ao modelo, sem contexto"
+        ],
+        "caso_id": "q08",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 2.5
+      },
+      {
+        "config": "sem_contexto",
+        "pergunta": "Moro de aluguel. O inquilino também é responsável pela manutenção da calçada?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": null, \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": null,
+          "confianca": 0.0
+        },
+        "trechos_usados": [],
+        "passos": [
+          "pergunta direta ao modelo, sem contexto"
+        ],
+        "caso_id": "q09",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 2.5
+      },
+      {
+        "config": "sem_contexto",
+        "pergunta": "Onde eu encontro os dados abertos das solicitações do SP156?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": null, \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": null,
+          "confianca": 0.0
+        },
+        "trechos_usados": [],
+        "passos": [
+          "pergunta direta ao modelo, sem contexto"
+        ],
+        "caso_id": "q10",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 2.6
+      },
+      {
+        "config": "sem_contexto",
+        "pergunta": "Pedi o tapa-buraco pelo 156 e nada foi feito. A quem posso recorrer?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": null, \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": null,
+          "confianca": 0.0
+        },
+        "trechos_usados": [],
+        "passos": [
+          "pergunta direta ao modelo, sem contexto"
+        ],
+        "caso_id": "q11",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 2.5
+      },
+      {
+        "config": "sem_contexto",
+        "pergunta": "Mesmo com buraco na pista, posso ficar sem indenização por culpa minha?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": null, \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": null,
+          "confianca": 0.0
+        },
+        "trechos_usados": [],
+        "passos": [
+          "pergunta direta ao modelo, sem contexto"
+        ],
+        "caso_id": "q12",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 2.5
+      },
+      {
+        "config": "sem_contexto",
+        "pergunta": "Quem tem a obrigação de sinalizar uma obra que abriu um buraco na rua?",
+        "saida_bruta": "{\"resposta\": \"O responsável pela obra tem a obrigação de sinalizar o buraco\", \"fonte_id\": \"1\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "O responsável pela obra tem a obrigação de sinalizar o buraco",
+          "fonte_id": "1",
+          "confianca": 0.95
+        },
+        "trechos_usados": [],
+        "passos": [
+          "pergunta direta ao modelo, sem contexto"
+        ],
+        "caso_id": "q13",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 2.7
+      },
+      {
+        "config": "sem_contexto",
+        "pergunta": "Quais são os canais de atendimento do SP156?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": null, \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": null,
+          "confianca": 0.0
+        },
+        "trechos_usados": [],
+        "passos": [
+          "pergunta direta ao modelo, sem contexto"
+        ],
+        "caso_id": "q14",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 2.5
+      },
+      {
+        "config": "sem_contexto",
+        "pergunta": "De quem é a competência de manter o asfalto das ruas da cidade?",
+        "saida_bruta": "{\"resposta\": \"competência de manter o asfalto das ruas da cidade é do Município de São Paulo\", \"fonte_id\": null, \"confianca\": 0.0}",
+        "json": {
+          "resposta": "competência de manter o asfalto das ruas da cidade é do Município de São Paulo",
+          "fonte_id": null,
+          "confianca": 0.0
+        },
+        "trechos_usados": [],
+        "passos": [
+          "pergunta direta ao modelo, sem contexto"
+        ],
+        "caso_id": "q15",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 2.8
+      },
+      {
+        "config": "sem_contexto",
+        "pergunta": "O que diz o artigo 37, parágrafo 6º, da Constituição?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": null, \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": null,
+          "confianca": 0.0
+        },
+        "trechos_usados": [],
+        "passos": [
+          "pergunta direta ao modelo, sem contexto"
+        ],
+        "caso_id": "q16",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 2.5
+      },
+      {
+        "config": "sem_contexto",
+        "pergunta": "Tem uma caçamba de entulho bloqueando a calçada da minha rua. O que eu faço?",
+        "saida_bruta": "{\"resposta\": \"Entre em contato com o Tapa Buraco para solicitar a remoção da caçamba de entulho bloqueando a calçada\", \"fonte_id\": \"1\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "Entre em contato com o Tapa Buraco para solicitar a remoção da caçamba de entulho bloqueando a calçada",
+          "fonte_id": "1",
+          "confianca": 0.95
+        },
+        "trechos_usados": [],
+        "passos": [
+          "pergunta direta ao modelo, sem contexto"
+        ],
+        "caso_id": "q17",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 2.9
+      },
+      {
+        "config": "sem_contexto",
+        "pergunta": "A prefeitura de São Paulo conserta a calçada inteira ou só o meio-fio?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": null, \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": null,
+          "confianca": 0.0
+        },
+        "trechos_usados": [],
+        "passos": [
+          "pergunta direta ao modelo, sem contexto"
+        ],
+        "caso_id": "q18",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 2.5
+      },
+      {
+        "config": "sem_contexto",
+        "pergunta": "Como acompanho o andamento da minha solicitação de tapa-buraco?",
+        "saida_bruta": "{\"resposta\": \"Você pode acompanhar o andamento da sua solicitação de tapa-buraco através do site oficial do Tapa Buraco, acessando a página onde você registrou sua solicitação e verificando o status atual.\", \"fonte_id\": \"tapa-buraco.sp\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "Você pode acompanhar o andamento da sua solicitação de tapa-buraco através do site oficial do Tapa Buraco, acessando a página onde você registrou sua solicitação e verificando o status atual.",
+          "fonte_id": "tapa-buraco.sp",
+          "confianca": 0.95
+        },
+        "trechos_usados": [],
+        "passos": [
+          "pergunta direta ao modelo, sem contexto"
+        ],
+        "caso_id": "q19",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 3.2
+      },
+      {
+        "config": "sem_contexto",
+        "pergunta": "Quais documentos preciso juntar para pedir a indenização administrativa?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": null, \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": null,
+          "confianca": 0.0
+        },
+        "trechos_usados": [],
+        "passos": [
+          "pergunta direta ao modelo, sem contexto"
+        ],
+        "caso_id": "q20",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 2.6
+      },
+      {
+        "config": "sem_contexto",
+        "pergunta": "Por que buraco é um risco maior para quem anda de moto ou bicicleta?",
+        "saida_bruta": "{\"resposta\": \"Buracos em vias e calçadas podem causar quedas ou danos à bike ou moto, aumentando o risco de lesões para quem anda de moto ou bicicleta\", \"fonte_id\": null, \"confianca\": 0.0}",
+        "json": {
+          "resposta": "Buracos em vias e calçadas podem causar quedas ou danos à bike ou moto, aumentando o risco de lesões para quem anda de moto ou bicicleta",
+          "fonte_id": null,
+          "confianca": 0.0
+        },
+        "trechos_usados": [],
+        "passos": [
+          "pergunta direta ao modelo, sem contexto"
+        ],
+        "caso_id": "q21",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 3.0
+      },
+      {
+        "config": "sem_contexto",
+        "pergunta": "Um app de relatos de buraco precisa guardar o CPF de quem reporta?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": null, \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": null,
+          "confianca": 0.0
+        },
+        "trechos_usados": [],
+        "passos": [
+          "pergunta direta ao modelo, sem contexto"
+        ],
+        "caso_id": "q22",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 2.6
+      },
+      {
+        "config": "sem_contexto",
+        "pergunta": "Quantos buracos foram tapados na Avenida Paulista em 2025?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": null, \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": null,
+          "confianca": 0.0
+        },
+        "trechos_usados": [],
+        "passos": [
+          "pergunta direta ao modelo, sem contexto"
+        ],
+        "caso_id": "q23",
+        "tipo": "nao_consta",
+        "correto": true,
+        "duracao_s": 2.5
+      },
+      {
+        "config": "sem_contexto",
+        "pergunta": "Qual é o valor médio das indenizações que a prefeitura de São Paulo paga por danos de buraco?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": null, \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": null,
+          "confianca": 0.0
+        },
+        "trechos_usados": [],
+        "passos": [
+          "pergunta direta ao modelo, sem contexto"
+        ],
+        "caso_id": "q24",
+        "tipo": "nao_consta",
+        "correto": true,
+        "duracao_s": 2.5
+      },
+      {
+        "config": "sem_contexto",
+        "pergunta": "Qual o telefone direto do subprefeito da Sé?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": null, \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": null,
+          "confianca": 0.0
+        },
+        "trechos_usados": [],
+        "passos": [
+          "pergunta direta ao modelo, sem contexto"
+        ],
+        "caso_id": "q25",
+        "tipo": "nao_consta",
+        "correto": true,
+        "duracao_s": 2.5
+      },
+      {
+        "config": "sem_contexto",
+        "pergunta": "A prefeitura empresta um carro reserva enquanto o meu está no conserto por causa do buraco?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": null, \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": null,
+          "confianca": 0.0
+        },
+        "trechos_usados": [],
+        "passos": [
+          "pergunta direta ao modelo, sem contexto"
+        ],
+        "caso_id": "q26",
+        "tipo": "nao_consta",
+        "correto": true,
+        "duracao_s": 2.5
+      },
+      {
+        "config": "sem_contexto",
+        "pergunta": "Qual tipo de massa asfáltica é usada na operação tapa-buraco de São Paulo?",
+        "saida_bruta": "{\"resposta\": \"massa asfáltica\", \"fonte_id\": \"123\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "massa asfáltica",
+          "fonte_id": "123",
+          "confianca": 0.95
+        },
+        "trechos_usados": [],
+        "passos": [
+          "pergunta direta ao modelo, sem contexto"
+        ],
+        "caso_id": "q27",
+        "tipo": "nao_consta",
+        "correto": false,
+        "duracao_s": 2.6
+      }
+    ]
+  },
+  "rag": {
+    "metricas": {
+      "config": "rag",
+      "acuracia": 0.741,
+      "alucinacao": 0.0,
+      "json_valido": 1.0,
+      "citacao_correta": 0.842,
+      "tempo_medio_s": 2.9
+    },
+    "execucoes": [
+      {
+        "config": "rag",
+        "pergunta": "Caí num buraco com o carro em São Paulo e danifiquei a roda. A prefeitura tem que pagar o conserto?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": \"ctb-02\", \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": "ctb-02",
+          "confianca": 0.0
+        },
+        "trechos_usados": [
+          "jur-01",
+          "ind-03",
+          "sp156-01"
+        ],
+        "passos": [
+          "busca top-3: jur-01=0.21, ind-03=0.11, sp156-01=0.08",
+          "resposta gerada com os trechos no prompt"
+        ],
+        "caso_id": "q01",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 2.7
+      },
+      {
+        "config": "rag",
+        "pergunta": "Como eu reporto um buraco na minha rua para a prefeitura de São Paulo?",
+        "saida_bruta": "{\"resposta\": \"Os canais oficiais de atendimento da Prefeitura de São Paulo são: Central Telefônica 156 (ligação), Portal SP156 (sp156.prefeitura.sp.gov.br), aplicativo SP156 para celular e o Chat SP156 no WhatsApp pelo número (11) 3230-5156. Por eles o cidadão solicita serviços de zeladoria, como tapa-buraco.\", \"fonte_id\": \"sp156-01\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "Os canais oficiais de atendimento da Prefeitura de São Paulo são: Central Telefônica 156 (ligação), Portal SP156 (sp156.prefeitura.sp.gov.br), aplicativo SP156 para celular e o Chat SP156 no WhatsApp pelo número (11) 3230-5156. Por eles o cidadão solicita serviços de zeladoria, como tapa-buraco.",
+          "fonte_id": "sp156-01",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "sp156-01",
+          "ind-01",
+          "dados-01"
+        ],
+        "passos": [
+          "busca top-3: sp156-01=0.18, ind-01=0.16, dados-01=0.14",
+          "resposta gerada com os trechos no prompt"
+        ],
+        "caso_id": "q02",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 4.4
+      },
+      {
+        "config": "rag",
+        "pergunta": "Qual o prazo que eu tenho para pedir indenização da prefeitura depois do acidente com o buraco?",
+        "saida_bruta": "{\"resposta\": \"5 anos\", \"fonte_id\": \"presc-01\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "5 anos",
+          "fonte_id": "presc-01",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "presc-01",
+          "ind-01",
+          "ind-03"
+        ],
+        "passos": [
+          "busca top-3: presc-01=0.26, ind-01=0.20, ind-03=0.19",
+          "resposta gerada com os trechos no prompt"
+        ],
+        "caso_id": "q03",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 2.9
+      },
+      {
+        "config": "rag",
+        "pergunta": "Quem é responsável por consertar a calçada quebrada em frente à minha casa em São Paulo?",
+        "saida_bruta": "{\"resposta\": \"o proprietário, o titular do domínio útil, o condomínio ou o possuidor a qualquer título, o que inclui o locatário\", \"fonte_id\": \"calc-01\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "o proprietário, o titular do domínio útil, o condomínio ou o possuidor a qualquer título, o que inclui o locatário",
+          "fonte_id": "calc-01",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "calc-01",
+          "calc-02",
+          "calc-05"
+        ],
+        "passos": [
+          "busca top-3: calc-01=0.23, calc-02=0.17, calc-05=0.12",
+          "resposta gerada com os trechos no prompt"
+        ],
+        "caso_id": "q04",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 3.4
+      },
+      {
+        "config": "rag",
+        "pergunta": "Se eu registrar o buraco no SP156, isso já vale como pedido de indenização?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": \"ctb-02\", \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": "ctb-02",
+          "confianca": 0.0
+        },
+        "trechos_usados": [
+          "ind-03",
+          "ind-02",
+          "ind-01"
+        ],
+        "passos": [
+          "busca top-3: ind-03=0.37, ind-02=0.17, ind-01=0.12",
+          "resposta gerada com os trechos no prompt"
+        ],
+        "caso_id": "q05",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 2.9
+      },
+      {
+        "config": "rag",
+        "pergunta": "Que provas devo guardar logo depois de cair num buraco?",
+        "saida_bruta": "{\"resposta\": \"tire fotos do buraco, do dano no veículo e da via, e anote o endereço exato, a data e o horário da ocorrência.\", \"fonte_id\": \"ctb-02\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "tire fotos do buraco, do dano no veículo e da via, e anote o endereço exato, a data e o horário da ocorrência.",
+          "fonte_id": "ctb-02",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "ind-02",
+          "mob-01",
+          "ind-03"
+        ],
+        "passos": [
+          "busca top-3: ind-02=0.16, mob-01=0.09, ind-03=0.07",
+          "resposta gerada com os trechos no prompt"
+        ],
+        "caso_id": "q06",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 3.5
+      },
+      {
+        "config": "rag",
+        "pergunta": "O buraco fica no corredor de ônibus. Quem faz o conserto?",
+        "saida_bruta": "{\"resposta\": \"SPTrans\", \"fonte_id\": \"sp156-03\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "SPTrans",
+          "fonte_id": "sp156-03",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "sp156-03",
+          "sp156-09",
+          "cc-01"
+        ],
+        "passos": [
+          "busca top-3: sp156-03=0.37, sp156-09=0.05, cc-01=0.05",
+          "resposta gerada com os trechos no prompt"
+        ],
+        "caso_id": "q07",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 3.0
+      },
+      {
+        "config": "rag",
+        "pergunta": "Qual é a largura mínima da faixa livre para pedestres na calçada?",
+        "saida_bruta": "{\"resposta\": \"1,20 m\", \"fonte_id\": \"calc-03\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "1,20 m",
+          "fonte_id": "calc-03",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "calc-03",
+          "calc-02",
+          "sp156-03"
+        ],
+        "passos": [
+          "busca top-3: calc-03=0.41, calc-02=0.08, sp156-03=0.07",
+          "resposta gerada com os trechos no prompt"
+        ],
+        "caso_id": "q08",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 2.9
+      },
+      {
+        "config": "rag",
+        "pergunta": "Moro de aluguel. O inquilino também é responsável pela manutenção da calçada?",
+        "saida_bruta": "{\"resposta\": \"sim\", \"fonte_id\": \"calc-01\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "sim",
+          "fonte_id": "calc-01",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "calc-01",
+          "calc-02",
+          "calc-05"
+        ],
+        "passos": [
+          "busca top-3: calc-01=0.26, calc-02=0.14, calc-05=0.09",
+          "resposta gerada com os trechos no prompt"
+        ],
+        "caso_id": "q09",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 2.6
+      },
+      {
+        "config": "rag",
+        "pergunta": "Onde eu encontro os dados abertos das solicitações do SP156?",
+        "saida_bruta": "{\"resposta\": \"Portal de Dados Abertos da Prefeitura de São Paulo\", \"fonte_id\": \"dados-01\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "Portal de Dados Abertos da Prefeitura de São Paulo",
+          "fonte_id": "dados-01",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "dados-01",
+          "dados-03",
+          "dados-02"
+        ],
+        "passos": [
+          "busca top-3: dados-01=0.38, dados-03=0.28, dados-02=0.17",
+          "resposta gerada com os trechos no prompt"
+        ],
+        "caso_id": "q10",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 3.0
+      },
+      {
+        "config": "rag",
+        "pergunta": "Pedi o tapa-buraco pelo 156 e nada foi feito. A quem posso recorrer?",
+        "saida_bruta": "{\"resposta\": \"Ouvidoria Geral do Município de São Paulo (CGM)\", \"fonte_id\": \"sp156-06\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "Ouvidoria Geral do Município de São Paulo (CGM)",
+          "fonte_id": "sp156-06",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "sp156-06",
+          "sp156-03",
+          "sp156-02"
+        ],
+        "passos": [
+          "busca top-3: sp156-06=0.20, sp156-03=0.17, sp156-02=0.14",
+          "resposta gerada com os trechos no prompt"
+        ],
+        "caso_id": "q11",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 3.2
+      },
+      {
+        "config": "rag",
+        "pergunta": "Mesmo com buraco na pista, posso ficar sem indenização por culpa minha?",
+        "saida_bruta": "{\"resposta\": \"sim\", \"fonte_id\": \"ctb-04\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "sim",
+          "fonte_id": "ctb-04",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "ctb-04",
+          "mob-01",
+          "ind-03"
+        ],
+        "passos": [
+          "busca top-3: ctb-04=0.22, mob-01=0.12, ind-03=0.06",
+          "resposta gerada com os trechos no prompt"
+        ],
+        "caso_id": "q12",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 2.9
+      },
+      {
+        "config": "rag",
+        "pergunta": "Quem tem a obrigação de sinalizar uma obra que abriu um buraco na rua?",
+        "saida_bruta": "{\"resposta\": \"o responsável pela sua execução\", \"fonte_id\": \"ctb-05\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "o responsável pela sua execução",
+          "fonte_id": "ctb-05",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "ctb-05",
+          "sp156-08",
+          "jur-01"
+        ],
+        "passos": [
+          "busca top-3: ctb-05=0.31, sp156-08=0.07, jur-01=0.04",
+          "resposta gerada com os trechos no prompt"
+        ],
+        "caso_id": "q13",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 3.0
+      },
+      {
+        "config": "rag",
+        "pergunta": "Quais são os canais de atendimento do SP156?",
+        "saida_bruta": "{\"resposta\": \"Os canais de atendimento SP156 são: Central Telefônica 156 (ligação), Portal SP156 (sp156.prefeitura.sp.gov.br), aplicativo SP156 para celular e o Chat SP156 no WhatsApp pelo número (11) 3230-5156.\", \"fonte_id\": \"sp156-01\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "Os canais de atendimento SP156 são: Central Telefônica 156 (ligação), Portal SP156 (sp156.prefeitura.sp.gov.br), aplicativo SP156 para celular e o Chat SP156 no WhatsApp pelo número (11) 3230-5156.",
+          "fonte_id": "sp156-01",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "sp156-01",
+          "dados-03",
+          "dados-02"
+        ],
+        "passos": [
+          "busca top-3: sp156-01=0.32, dados-03=0.29, dados-02=0.12",
+          "resposta gerada com os trechos no prompt"
+        ],
+        "caso_id": "q14",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 3.9
+      },
+      {
+        "config": "rag",
+        "pergunta": "De quem é a competência de manter o asfalto das ruas da cidade?",
+        "saida_bruta": "{\"resposta\": \"Compete aos órgãos executivos de trânsito dos municípios\", \"fonte_id\": \"ctb-03\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "Compete aos órgãos executivos de trânsito dos municípios",
+          "fonte_id": "ctb-03",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "ctb-03",
+          "ctb-01",
+          "sp156-03"
+        ],
+        "passos": [
+          "busca top-3: ctb-03=0.35, ctb-01=0.05, sp156-03=0.04",
+          "resposta gerada com os trechos no prompt"
+        ],
+        "caso_id": "q15",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 3.2
+      },
+      {
+        "config": "rag",
+        "pergunta": "O que diz o artigo 37, parágrafo 6º, da Constituição?",
+        "saida_bruta": "{\"resposta\": \"As pessoas jurídicas de direito público respondem pelos danos que seus agentes, nessa qualidade, causarem a terceiros. É a responsabilidade objetiva do Estado (teoria do risco administrativo): o cidadão não precisa provar culpa da Administração, basta demonstrar o dano, o fato e o nexo causal entre eles.\", \"fonte_id\": \"ctb-01\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "As pessoas jurídicas de direito público respondem pelos danos que seus agentes, nessa qualidade, causarem a terceiros. É a responsabilidade objetiva do Estado (teoria do risco administrativo): o cidadão não precisa provar culpa da Administração, basta demonstrar o dano, o fato e o nexo causal entre eles.",
+          "fonte_id": "ctb-01",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "cf-01",
+          "jur-01",
+          "lgpd-01"
+        ],
+        "passos": [
+          "busca top-3: cf-01=0.19, jur-01=0.10, lgpd-01=0.05",
+          "resposta gerada com os trechos no prompt"
+        ],
+        "caso_id": "q16",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 4.1
+      },
+      {
+        "config": "rag",
+        "pergunta": "Tem uma caçamba de entulho bloqueando a calçada da minha rua. O que eu faço?",
+        "saida_bruta": "{\"resposta\": \"reportar pelo SP156\", \"fonte_id\": \"ctb-05\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "reportar pelo SP156",
+          "fonte_id": "ctb-05",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "calc-05",
+          "sp156-08",
+          "calc-01"
+        ],
+        "passos": [
+          "busca top-3: calc-05=0.19, sp156-08=0.15, calc-01=0.09",
+          "resposta gerada com os trechos no prompt"
+        ],
+        "caso_id": "q17",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 3.0
+      },
+      {
+        "config": "rag",
+        "pergunta": "A prefeitura de São Paulo conserta a calçada inteira ou só o meio-fio?",
+        "saida_bruta": "{\"resposta\": \"a calçada em si é do responsável pelo imóvel\", \"fonte_id\": \"calc-02\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "a calçada em si é do responsável pelo imóvel",
+          "fonte_id": "calc-02",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "calc-02",
+          "ind-01",
+          "sp156-01"
+        ],
+        "passos": [
+          "busca top-3: calc-02=0.32, ind-01=0.14, sp156-01=0.11",
+          "resposta gerada com os trechos no prompt"
+        ],
+        "caso_id": "q18",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 3.1
+      },
+      {
+        "config": "rag",
+        "pergunta": "Como acompanho o andamento da minha solicitação de tapa-buraco?",
+        "saida_bruta": "{\"resposta\": \"O andamento da sua solicitação de tapa-buraco pode ser acompanhado na aba 'Acompanhe sua solicitação' do Portal SP156 (com login), em 'Minhas Solicitações' no aplicativo, ou pelo Chat SP156 no WhatsApp\", \"fonte_id\": \"sp156-04\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "O andamento da sua solicitação de tapa-buraco pode ser acompanhado na aba 'Acompanhe sua solicitação' do Portal SP156 (com login), em 'Minhas Solicitações' no aplicativo, ou pelo Chat SP156 no WhatsApp",
+          "fonte_id": "sp156-04",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "sp156-04",
+          "sp156-02",
+          "sp156-03"
+        ],
+        "passos": [
+          "busca top-3: sp156-04=0.20, sp156-02=0.17, sp156-03=0.14",
+          "resposta gerada com os trechos no prompt"
+        ],
+        "caso_id": "q19",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 3.7
+      },
+      {
+        "config": "rag",
+        "pergunta": "Quais documentos preciso juntar para pedir a indenização administrativa?",
+        "saida_bruta": "{\"resposta\": \"documento de identidade e CPF, documento do veículo (CRLV) e CNH do condutor, boletim de ocorrência relatando o acidente, fotos do local e do dano, e orçamentos ou notas fiscais do conserto.\", \"fonte_id\": \"ind-04\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "documento de identidade e CPF, documento do veículo (CRLV) e CNH do condutor, boletim de ocorrência relatando o acidente, fotos do local e do dano, e orçamentos ou notas fiscais do conserto.",
+          "fonte_id": "ind-04",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "ind-03",
+          "ind-04",
+          "ind-01"
+        ],
+        "passos": [
+          "busca top-3: ind-03=0.22, ind-04=0.18, ind-01=0.14",
+          "resposta gerada com os trechos no prompt"
+        ],
+        "caso_id": "q20",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 3.5
+      },
+      {
+        "config": "rag",
+        "pergunta": "Por que buraco é um risco maior para quem anda de moto ou bicicleta?",
+        "saida_bruta": "{\"resposta\": \"Buraco na pista é um risco maior para quem anda de moto ou de bicicleta devido à possibilidade de cair ou colidir ao desviar bruscamente\", \"fonte_id\": \"mob-01\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "Buraco na pista é um risco maior para quem anda de moto ou de bicicleta devido à possibilidade de cair ou colidir ao desviar bruscamente",
+          "fonte_id": "mob-01",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "mob-01",
+          "jur-01",
+          "cf-01"
+        ],
+        "passos": [
+          "busca top-3: mob-01=0.38, jur-01=0.04, cf-01=0.04",
+          "resposta gerada com os trechos no prompt"
+        ],
+        "caso_id": "q21",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 3.5
+      },
+      {
+        "config": "rag",
+        "pergunta": "Um app de relatos de buraco precisa guardar o CPF de quem reporta?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": \"lgpd-01\", \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": "lgpd-01",
+          "confianca": 0.0
+        },
+        "trechos_usados": [
+          "lgpd-01",
+          "ind-04",
+          "lgpd-02"
+        ],
+        "passos": [
+          "busca top-3: lgpd-01=0.27, ind-04=0.07, lgpd-02=0.04",
+          "resposta gerada com os trechos no prompt"
+        ],
+        "caso_id": "q22",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 2.9
+      },
+      {
+        "config": "rag",
+        "pergunta": "Quantos buracos foram tapados na Avenida Paulista em 2025?",
+        "saida_bruta": null,
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": null,
+          "confianca": 0.0
+        },
+        "trechos_usados": [],
+        "passos": [
+          "busca top-3: calc-04=0.09, ilum-01=0.08, calc-03=0.08",
+          "score máximo abaixo do limiar (0.15): recusa"
+        ],
+        "caso_id": "q23",
+        "tipo": "nao_consta",
+        "correto": true,
+        "duracao_s": 0.0
+      },
+      {
+        "config": "rag",
+        "pergunta": "Qual é o valor médio das indenizações que a prefeitura de São Paulo paga por danos de buraco?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": \"ind-01\", \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": "ind-01",
+          "confianca": 0.0
+        },
+        "trechos_usados": [
+          "ind-01",
+          "sp156-01",
+          "ind-02"
+        ],
+        "passos": [
+          "busca top-3: ind-01=0.20, sp156-01=0.16, ind-02=0.16",
+          "resposta gerada com os trechos no prompt"
+        ],
+        "caso_id": "q24",
+        "tipo": "nao_consta",
+        "correto": true,
+        "duracao_s": 3.0
+      },
+      {
+        "config": "rag",
+        "pergunta": "Qual o telefone direto do subprefeito da Sé?",
+        "saida_bruta": null,
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": null,
+          "confianca": 0.0
+        },
+        "trechos_usados": [],
+        "passos": [
+          "busca top-3: lgpd-02=0.00, lgpd-01=0.00, mob-01=0.00",
+          "score máximo abaixo do limiar (0.15): recusa"
+        ],
+        "caso_id": "q25",
+        "tipo": "nao_consta",
+        "correto": true,
+        "duracao_s": 0.0
+      },
+      {
+        "config": "rag",
+        "pergunta": "A prefeitura empresta um carro reserva enquanto o meu está no conserto por causa do buraco?",
+        "saida_bruta": null,
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": null,
+          "confianca": 0.0
+        },
+        "trechos_usados": [],
+        "passos": [
+          "busca top-3: jur-01=0.13, ind-03=0.11, calc-02=0.10",
+          "score máximo abaixo do limiar (0.15): recusa"
+        ],
+        "caso_id": "q26",
+        "tipo": "nao_consta",
+        "correto": true,
+        "duracao_s": 0.0
+      },
+      {
+        "config": "rag",
+        "pergunta": "Qual tipo de massa asfáltica é usada na operação tapa-buraco de São Paulo?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": \"sp156-01\", \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": "sp156-01",
+          "confianca": 0.0
+        },
+        "trechos_usados": [
+          "sp156-02",
+          "sp156-03",
+          "sp156-01"
+        ],
+        "passos": [
+          "busca top-3: sp156-02=0.23, sp156-03=0.19, sp156-01=0.19",
+          "resposta gerada com os trechos no prompt"
+        ],
+        "caso_id": "q27",
+        "tipo": "nao_consta",
+        "correto": true,
+        "duracao_s": 3.1
+      }
+    ]
+  },
+  "agente": {
+    "metricas": {
+      "config": "agente",
+      "acuracia": 0.704,
+      "alucinacao": 0.0,
+      "json_valido": 1.0,
+      "citacao_correta": 1.0,
+      "tempo_medio_s": 4.8
+    },
+    "execucoes": [
+      {
+        "config": "agente",
+        "pergunta": "Caí num buraco com o carro em São Paulo e danifiquei a roda. A prefeitura tem que pagar o conserto?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": \"ctb-02\", \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": "ctb-02",
+          "confianca": 0.0
+        },
+        "trechos_usados": [
+          "jur-01",
+          "ind-03",
+          "sp156-01"
+        ],
+        "passos": [
+          "busca 1: jur-01=0.21, ind-03=0.11, sp156-01=0.08",
+          "resposta gerada",
+          "modelo recusou com os trechos em mãos"
+        ],
+        "caso_id": "q01",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 2.6
+      },
+      {
+        "config": "agente",
+        "pergunta": "Como eu reporto um buraco na minha rua para a prefeitura de São Paulo?",
+        "saida_bruta": "{\"resposta\": \"Para reportar um buraco na sua rua para a prefeitura de São Paulo, você deve utilizar os canais oficiais de atendimento da Prefeitura de São Paulo, como a Central Telefônica 156, o Portal SP156 (sp156.prefeitura.sp.gov.br), o aplicativo SP156 para celular ou o Chat SP156 no WhatsApp pelo número (11) 3230-5156. Por esses canais, o cidadão solicita serviços de zeladoria, como tapa-buraco.\", \"fonte_id\": \"sp156-01\", \"confianca\": 1.0}",
+        "json": {
+          "resposta": "Para reportar um buraco na sua rua para a prefeitura de São Paulo, você deve utilizar os canais oficiais de atendimento da Prefeitura de São Paulo, como a Central Telefônica 156, o Portal SP156 (sp156.prefeitura.sp.gov.br), o aplicativo SP156 para celular ou o Chat SP156 no WhatsApp pelo número (11) 3230-5156. Por esses canais, o cidadão solicita serviços de zeladoria, como tapa-buraco.",
+          "fonte_id": "sp156-01",
+          "confianca": 1.0
+        },
+        "trechos_usados": [
+          "sp156-01",
+          "ind-01",
+          "dados-01"
+        ],
+        "passos": [
+          "busca 1: sp156-01=0.18, ind-01=0.16, dados-01=0.14",
+          "resposta gerada",
+          "autocrítica: SIM"
+        ],
+        "caso_id": "q02",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 7.2
+      },
+      {
+        "config": "agente",
+        "pergunta": "Qual o prazo que eu tenho para pedir indenização da prefeitura depois do acidente com o buraco?",
+        "saida_bruta": "{\"resposta\": \"5 anos\", \"fonte_id\": \"presc-01\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "5 anos",
+          "fonte_id": "presc-01",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "presc-01",
+          "ind-01",
+          "ind-03"
+        ],
+        "passos": [
+          "busca 1: presc-01=0.26, ind-01=0.20, ind-03=0.19",
+          "resposta gerada",
+          "autocrítica: SIM"
+        ],
+        "caso_id": "q03",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 5.4
+      },
+      {
+        "config": "agente",
+        "pergunta": "Quem é responsável por consertar a calçada quebrada em frente à minha casa em São Paulo?",
+        "saida_bruta": "{\"resposta\": \"o proprietário, o titular do domínio útil, o condomínio ou o possuidor a qualquer título, o que inclui o locatário\", \"fonte_id\": \"calc-01\", \"confiança\": 0.95}",
+        "json": {
+          "resposta": "o proprietário, o titular do domínio útil, o condomínio ou o possuidor a qualquer título, o que inclui o locatário",
+          "fonte_id": "calc-01",
+          "confiança": 0.95
+        },
+        "trechos_usados": [
+          "calc-01",
+          "calc-02",
+          "calc-05"
+        ],
+        "passos": [
+          "busca 1: calc-01=0.23, calc-02=0.17, calc-05=0.12",
+          "resposta gerada",
+          "autocrítica: SIM"
+        ],
+        "caso_id": "q04",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 5.7
+      },
+      {
+        "config": "agente",
+        "pergunta": "Se eu registrar o buraco no SP156, isso já vale como pedido de indenização?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": \"ctb-02\", \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": "ctb-02",
+          "confianca": 0.0
+        },
+        "trechos_usados": [
+          "ind-03",
+          "ind-02",
+          "ind-01"
+        ],
+        "passos": [
+          "busca 1: ind-03=0.37, ind-02=0.17, ind-01=0.12",
+          "resposta gerada",
+          "modelo recusou com os trechos em mãos"
+        ],
+        "caso_id": "q05",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 2.8
+      },
+      {
+        "config": "agente",
+        "pergunta": "Que provas devo guardar logo depois de cair num buraco?",
+        "saida_bruta": "{\"resposta\": \"tire fotos do buraco, do dano no veículo e da via, e anote o endereço exato, a data e o horário da ocorrência\", \"fonte_id\": \"ctb-02\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "tire fotos do buraco, do dano no veículo e da via, e anote o endereço exato, a data e o horário da ocorrência",
+          "fonte_id": "ind-02",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "ind-02",
+          "mob-01",
+          "ind-03"
+        ],
+        "passos": [
+          "busca 1: ind-02=0.16, mob-01=0.09, ind-03=0.07",
+          "resposta gerada",
+          "fonte citada ('ctb-02') não está nos trechos: corrigida para o top-1",
+          "autocrítica: SIM"
+        ],
+        "caso_id": "q06",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 5.6
+      },
+      {
+        "config": "agente",
+        "pergunta": "O buraco fica no corredor de ônibus. Quem faz o conserto?",
+        "saida_bruta": "{\"resposta\": \"SPTrans\", \"fonte_id\": \"sp156-03\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "SPTrans",
+          "fonte_id": "sp156-03",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "sp156-03",
+          "sp156-09",
+          "cc-01"
+        ],
+        "passos": [
+          "busca 1: sp156-03=0.37, sp156-09=0.05, cc-01=0.05",
+          "resposta gerada",
+          "autocrítica: SIM"
+        ],
+        "caso_id": "q07",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 5.2
+      },
+      {
+        "config": "agente",
+        "pergunta": "Qual é a largura mínima da faixa livre para pedestres na calçada?",
+        "saida_bruta": "{\"resposta\": \"1,20 m\", \"fonte_id\": \"calc-03\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "1,20 m",
+          "fonte_id": "calc-03",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "calc-03",
+          "calc-02",
+          "sp156-03"
+        ],
+        "passos": [
+          "busca 1: calc-03=0.41, calc-02=0.08, sp156-03=0.07",
+          "resposta gerada",
+          "autocrítica: SIM"
+        ],
+        "caso_id": "q08",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 5.2
+      },
+      {
+        "config": "agente",
+        "pergunta": "Moro de aluguel. O inquilino também é responsável pela manutenção da calçada?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": \"calc-01\", \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": "calc-01",
+          "confianca": 0.0
+        },
+        "trechos_usados": [
+          "calc-01",
+          "calc-02",
+          "calc-05"
+        ],
+        "passos": [
+          "busca 1: calc-01=0.26, calc-02=0.14, calc-05=0.09",
+          "resposta gerada",
+          "modelo recusou com os trechos em mãos"
+        ],
+        "caso_id": "q09",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 2.6
+      },
+      {
+        "config": "agente",
+        "pergunta": "Onde eu encontro os dados abertos das solicitações do SP156?",
+        "saida_bruta": "{\"resposta\": \"Portal de Dados Abertos da Prefeitura de São Paulo\", \"fonte_id\": \"dados-01\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "Portal de Dados Abertos da Prefeitura de São Paulo",
+          "fonte_id": "dados-01",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "dados-01",
+          "dados-03",
+          "dados-02"
+        ],
+        "passos": [
+          "busca 1: dados-01=0.38, dados-03=0.28, dados-02=0.17",
+          "resposta gerada",
+          "autocrítica: SIM"
+        ],
+        "caso_id": "q10",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 5.3
+      },
+      {
+        "config": "agente",
+        "pergunta": "Pedi o tapa-buraco pelo 156 e nada foi feito. A quem posso recorrer?",
+        "saida_bruta": "{\"resposta\": \"Ouvidoria Geral do Município de São Paulo (CGM)\", \"fonte_id\": \"sp156-06\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": null,
+          "confianca": 0.0
+        },
+        "trechos_usados": [
+          "sp156-06",
+          "sp156-03",
+          "sp156-02"
+        ],
+        "passos": [
+          "busca 1: sp156-06=0.20, sp156-03=0.17, sp156-02=0.14",
+          "resposta gerada",
+          "autocrítica: NAO",
+          "resposta não sustentada pelo trecho: recusa segura"
+        ],
+        "caso_id": "q11",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 5.4
+      },
+      {
+        "config": "agente",
+        "pergunta": "Mesmo com buraco na pista, posso ficar sem indenização por culpa minha?",
+        "saida_bruta": "{\"resposta\": \"sim\", \"fonte_id\": \"ctb-04\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "sim",
+          "fonte_id": "ctb-04",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "ctb-04",
+          "mob-01",
+          "ind-03"
+        ],
+        "passos": [
+          "busca 1: ctb-04=0.22, mob-01=0.12, ind-03=0.06",
+          "resposta gerada",
+          "autocrítica: SIM"
+        ],
+        "caso_id": "q12",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 5.1
+      },
+      {
+        "config": "agente",
+        "pergunta": "Quem tem a obrigação de sinalizar uma obra que abriu um buraco na rua?",
+        "saida_bruta": "{\"resposta\": \"o responsável pela sua execução\", \"fonte_id\": \"ctb-05\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "o responsável pela sua execução",
+          "fonte_id": "ctb-05",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "ctb-05",
+          "sp156-08",
+          "jur-01"
+        ],
+        "passos": [
+          "busca 1: ctb-05=0.31, sp156-08=0.07, jur-01=0.04",
+          "resposta gerada",
+          "autocrítica: SIM"
+        ],
+        "caso_id": "q13",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 6.6
+      },
+      {
+        "config": "agente",
+        "pergunta": "Quais são os canais de atendimento do SP156?",
+        "saida_bruta": "{\"resposta\": \"Os canais de atendimento SP156 são: Central Telefônica 156 (ligação), Portal SP156 (sp156.prefeitura.sp.gov.br), aplicativo SP156 para celular e o Chat SP156 no WhatsApp pelo número (11) 3230-5156.\", \"fonte_id\": \"sp156-01\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "Os canais de atendimento SP156 são: Central Telefônica 156 (ligação), Portal SP156 (sp156.prefeitura.sp.gov.br), aplicativo SP156 para celular e o Chat SP156 no WhatsApp pelo número (11) 3230-5156.",
+          "fonte_id": "sp156-01",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "sp156-01",
+          "dados-03",
+          "dados-02"
+        ],
+        "passos": [
+          "busca 1: sp156-01=0.32, dados-03=0.29, dados-02=0.12",
+          "resposta gerada",
+          "autocrítica: SIM"
+        ],
+        "caso_id": "q14",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 6.1
+      },
+      {
+        "config": "agente",
+        "pergunta": "De quem é a competência de manter o asfalto das ruas da cidade?",
+        "saida_bruta": "{\"resposta\": \"da Prefeitura, por meio das Subprefeituras\", \"fonte_id\": \"ctb-03\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "da Prefeitura, por meio das Subprefeituras",
+          "fonte_id": "ctb-03",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "ctb-03",
+          "ctb-01",
+          "sp156-03"
+        ],
+        "passos": [
+          "busca 1: ctb-03=0.35, ctb-01=0.05, sp156-03=0.04",
+          "resposta gerada",
+          "autocrítica: SIM"
+        ],
+        "caso_id": "q15",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 5.3
+      },
+      {
+        "config": "agente",
+        "pergunta": "O que diz o artigo 37, parágrafo 6º, da Constituição?",
+        "saida_bruta": "{\"resposta\": \"As pessoas jurídicas de direito público respondem pelos danos que seus agentes, nessa qualidade, causarem a terceiros. É a responsabilidade objetiva do Estado (teoria do risco administrativo): o cidadão não precisa provar culpa da Administração, basta demonstrar o dano, o fato e o nexo causal entre eles.\", \"fonte_id\": \"ctb-01\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "As pessoas jurídicas de direito público respondem pelos danos que seus agentes, nessa qualidade, causarem a terceiros. É a responsabilidade objetiva do Estado (teoria do risco administrativo): o cidadão não precisa provar culpa da Administração, basta demonstrar o dano, o fato e o nexo causal entre eles.",
+          "fonte_id": "cf-01",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "cf-01",
+          "jur-01",
+          "lgpd-01"
+        ],
+        "passos": [
+          "busca 1: cf-01=0.19, jur-01=0.10, lgpd-01=0.05",
+          "resposta gerada",
+          "fonte citada ('ctb-01') não está nos trechos: corrigida para o top-1",
+          "autocrítica: SIM"
+        ],
+        "caso_id": "q16",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 6.1
+      },
+      {
+        "config": "agente",
+        "pergunta": "Tem uma caçamba de entulho bloqueando a calçada da minha rua. O que eu faço?",
+        "saida_bruta": "{\"resposta\": \"reportar pelo SP156\", \"fonte_id\": \"ctb-05\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "reportar pelo SP156",
+          "fonte_id": "calc-05",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "calc-05",
+          "sp156-08",
+          "calc-01"
+        ],
+        "passos": [
+          "busca 1: calc-05=0.19, sp156-08=0.15, calc-01=0.09",
+          "resposta gerada",
+          "fonte citada ('ctb-05') não está nos trechos: corrigida para o top-1",
+          "autocrítica: SIM"
+        ],
+        "caso_id": "q17",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 5.3
+      },
+      {
+        "config": "agente",
+        "pergunta": "A prefeitura de São Paulo conserta a calçada inteira ou só o meio-fio?",
+        "saida_bruta": "{\"resposta\": \"à Prefeitura de São Paulo cabe a manutenção do meio-fio (a faixa que separa a via pública da calçada), enquanto a calçada em si é do responsável pelo imóvel.\", \"fonte_id\": \"calc-02\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "à Prefeitura de São Paulo cabe a manutenção do meio-fio (a faixa que separa a via pública da calçada), enquanto a calçada em si é do responsável pelo imóvel.",
+          "fonte_id": "calc-02",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "calc-02",
+          "ind-01",
+          "sp156-01"
+        ],
+        "passos": [
+          "busca 1: calc-02=0.32, ind-01=0.14, sp156-01=0.11",
+          "resposta gerada",
+          "autocrítica: SIM"
+        ],
+        "caso_id": "q18",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 5.8
+      },
+      {
+        "config": "agente",
+        "pergunta": "Como acompanho o andamento da minha solicitação de tapa-buraco?",
+        "saida_bruta": "{\"resposta\": \"O andamento da sua solicitação de tapa-buraco pode ser acompanhado na aba 'Acompanhe sua solicitação' do Portal SP156 (com login), em 'Minhas Solicitações' no aplicativo, ou pelo Chat SP156 no WhatsApp.\", \"fonte_id\": \"sp156-04\", \"confianca\": 1.0}",
+        "json": {
+          "resposta": "O andamento da sua solicitação de tapa-buraco pode ser acompanhado na aba 'Acompanhe sua solicitação' do Portal SP156 (com login), em 'Minhas Solicitações' no aplicativo, ou pelo Chat SP156 no WhatsApp.",
+          "fonte_id": "sp156-04",
+          "confianca": 1.0
+        },
+        "trechos_usados": [
+          "sp156-04",
+          "sp156-02",
+          "sp156-03"
+        ],
+        "passos": [
+          "busca 1: sp156-04=0.20, sp156-02=0.17, sp156-03=0.14",
+          "resposta gerada",
+          "autocrítica: SIM"
+        ],
+        "caso_id": "q19",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 6.0
+      },
+      {
+        "config": "agente",
+        "pergunta": "Quais documentos preciso juntar para pedir a indenização administrativa?",
+        "saida_bruta": "{\"resposta\": \"documento de identidade e CPF, documento do veículo (CRLV) e CNH do condutor, boletim de ocorrência relatando o acidente, fotos do local e do dano, e orçamentos ou notas fiscais do conserto.\", \"fonte_id\": \"ind-04\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "documento de identidade e CPF, documento do veículo (CRLV) e CNH do condutor, boletim de ocorrência relatando o acidente, fotos do local e do dano, e orçamentos ou notas fiscais do conserto.",
+          "fonte_id": "ind-04",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "ind-03",
+          "ind-04",
+          "ind-01"
+        ],
+        "passos": [
+          "busca 1: ind-03=0.22, ind-04=0.18, ind-01=0.14",
+          "resposta gerada",
+          "autocrítica: SIM"
+        ],
+        "caso_id": "q20",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 5.9
+      },
+      {
+        "config": "agente",
+        "pergunta": "Por que buraco é um risco maior para quem anda de moto ou bicicleta?",
+        "saida_bruta": "{\"resposta\": \"Buraco na pista é um risco maior para quem anda de moto ou de bicicleta: motociclistas e ciclistas podem cair ou colidir ao desviar bruscamente\", \"fonte_id\": \"mob-01\", \"confianca\": 0.95}",
+        "json": {
+          "resposta": "Buraco na pista é um risco maior para quem anda de moto ou de bicicleta: motociclistas e ciclistas podem cair ou colidir ao desviar bruscamente",
+          "fonte_id": "mob-01",
+          "confianca": 0.95
+        },
+        "trechos_usados": [
+          "mob-01",
+          "jur-01",
+          "cf-01"
+        ],
+        "passos": [
+          "busca 1: mob-01=0.38, jur-01=0.04, cf-01=0.04",
+          "resposta gerada",
+          "autocrítica: SIM"
+        ],
+        "caso_id": "q21",
+        "tipo": "respondivel",
+        "correto": true,
+        "duracao_s": 5.5
+      },
+      {
+        "config": "agente",
+        "pergunta": "Um app de relatos de buraco precisa guardar o CPF de quem reporta?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": \"lgpd-01\", \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": "lgpd-01",
+          "confianca": 0.0
+        },
+        "trechos_usados": [
+          "lgpd-01",
+          "ind-04",
+          "lgpd-02"
+        ],
+        "passos": [
+          "busca 1: lgpd-01=0.27, ind-04=0.07, lgpd-02=0.04",
+          "resposta gerada",
+          "modelo recusou com os trechos em mãos"
+        ],
+        "caso_id": "q22",
+        "tipo": "respondivel",
+        "correto": false,
+        "duracao_s": 2.5
+      },
+      {
+        "config": "agente",
+        "pergunta": "Quantos buracos foram tapados na Avenida Paulista em 2025?",
+        "saida_bruta": null,
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": null,
+          "confianca": 0.0
+        },
+        "trechos_usados": [],
+        "passos": [
+          "busca 1: calc-04=0.09, ilum-01=0.08, calc-03=0.08",
+          "score baixo; consulta reformulada: 'Quantos consertos de conservação do pavimento e tapas-buracos foram realizados na Avenida Paulista em 2025?'",
+          "busca 2: ctb-02=0.10, ctb-03=0.08, calc-01=0.06",
+          "ainda abaixo do limiar (0.15): recusa"
+        ],
+        "caso_id": "q23",
+        "tipo": "nao_consta",
+        "correto": true,
+        "duracao_s": 2.5
+      },
+      {
+        "config": "agente",
+        "pergunta": "Qual é o valor médio das indenizações que a prefeitura de São Paulo paga por danos de buraco?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": \"ind-01\", \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": "ind-01",
+          "confianca": 0.0
+        },
+        "trechos_usados": [
+          "ind-01",
+          "sp156-01",
+          "ind-02"
+        ],
+        "passos": [
+          "busca 1: ind-01=0.20, sp156-01=0.16, ind-02=0.16",
+          "resposta gerada",
+          "modelo recusou com os trechos em mãos"
+        ],
+        "caso_id": "q24",
+        "tipo": "nao_consta",
+        "correto": true,
+        "duracao_s": 2.6
+      },
+      {
+        "config": "agente",
+        "pergunta": "Qual o telefone direto do subprefeito da Sé?",
+        "saida_bruta": null,
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": null,
+          "confianca": 0.0
+        },
+        "trechos_usados": [],
+        "passos": [
+          "busca 1: lgpd-02=0.00, lgpd-01=0.00, mob-01=0.00",
+          "score baixo; consulta reformulada: 'Qual o número telefônico diretamente ligado ao subprefeito da Sé?'",
+          "busca 2: sp156-04=0.13, sp156-01=0.12, lgpd-02=0.00",
+          "ainda abaixo do limiar (0.15): recusa"
+        ],
+        "caso_id": "q25",
+        "tipo": "nao_consta",
+        "correto": true,
+        "duracao_s": 2.5
+      },
+      {
+        "config": "agente",
+        "pergunta": "A prefeitura empresta um carro reserva enquanto o meu está no conserto por causa do buraco?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": \"ctb-02\", \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": "ctb-02",
+          "confianca": 0.0
+        },
+        "trechos_usados": [
+          "jur-01",
+          "calc-02",
+          "ind-03"
+        ],
+        "passos": [
+          "busca 1: jur-01=0.13, ind-03=0.11, calc-02=0.10",
+          "score baixo; consulta reformulada: 'A prefeitura empresta um carro reserva enquanto o seu está em conserto por causa do conserto do pavimento da via pública?'",
+          "busca 2: jur-01=0.18, calc-02=0.13, ind-03=0.10",
+          "resposta gerada",
+          "modelo recusou com os trechos em mãos"
+        ],
+        "caso_id": "q26",
+        "tipo": "nao_consta",
+        "correto": true,
+        "duracao_s": 5.4
+      },
+      {
+        "config": "agente",
+        "pergunta": "Qual tipo de massa asfáltica é usada na operação tapa-buraco de São Paulo?",
+        "saida_bruta": "{\"resposta\": \"não consta\", \"fonte_id\": \"sp156-01\", \"confianca\": 0.0}",
+        "json": {
+          "resposta": "não consta",
+          "fonte_id": "sp156-01",
+          "confianca": 0.0
+        },
+        "trechos_usados": [
+          "sp156-02",
+          "sp156-03",
+          "sp156-01"
+        ],
+        "passos": [
+          "busca 1: sp156-02=0.23, sp156-03=0.19, sp156-01=0.19",
+          "resposta gerada",
+          "modelo recusou com os trechos em mãos"
+        ],
+        "caso_id": "q27",
+        "tipo": "nao_consta",
+        "correto": true,
+        "duracao_s": 2.6
+      }
+    ]
+  }
+}
