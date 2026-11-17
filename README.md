@@ -63,6 +63,10 @@ H:\llama.cpp\llama-server.exe -m H:\modelos\Qwen2.5-3B-Instruct-Q4_K_M.gguf -ngl
 `-ngl 99` manda todas as camadas para a GPU (RX 6600 via Vulkan).
 Teste em <http://localhost:8080> — há uma interface de chat embutida.
 
+> **Porta 8080 ocupada?** (ex.: software de backup usando a porta) Suba com `--port 8081` e
+> aponte o projeto para ela antes de rodar notebooks, scripts ou a API:
+> `$env:LLM_URL = "http://localhost:8081/v1/chat/completions"`
+
 ### 2. Ambiente Python
 
 ```powershell
@@ -119,4 +123,4 @@ Busca: **recall@1 = 95,5% · recall@3 = 100%**. Análise completa e os 5 erros n
 
 - Repositório: https://github.com/GabrielCatanzaro/tapa-buraco-ia
 - Vídeo: [PREENCHER]
-- MVP (DevOps/Cloud): [PREENCHER]
+- MVP e deploy (componente Produção): repositório `tapa-buraco-devops`
