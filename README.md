@@ -152,5 +152,4 @@ Busca: **recall@1 = 95,5% · recall@3 = 100%**. Análise completa e os 5 erros n
 ## Links
 
 - Repositório: https://github.com/GabrielCatanzaro/tapa-buraco-ia
-- Vídeo: [PREENCHER]
-- MVP e deploy (componente Produção): repositório `tapa-buraco-devops`
+- Vídeo: https://youtu.be/dacTMXvSPoE
