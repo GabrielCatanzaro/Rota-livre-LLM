@@ -88,7 +88,13 @@ python -m src.avaliar                            # placar completo (alguns minut
 uvicorn src.api:app --port 8000
 ```
 
-### 4. API
+### 4. Tela de demonstração
+
+Com o `llama-server` e a API no ar, abra **http://127.0.0.1:8000**. A tela mostra, lado a lado, a resposta das
+3 configurações (sem contexto, RAG e agente) para a mesma pergunta, com a fonte citada, a confiança e os passos
+do agente, e faz a triagem de um relato livre em JSON.
+
+### 5. API
 
 ```
 GET  /health              → {"api": "ok", "llm_local": true}

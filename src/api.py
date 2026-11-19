@@ -4,11 +4,15 @@ Expõe a IA para o MVP:
 - POST /perguntar  → resposta fundamentada em JSON (modo: sem_contexto | rag | agente)
 - POST /triagem    → transforma o relato livre do cidadão em um JSON estruturado
 - GET  /health     → status da API e da LLM local
+- GET  /           → tela de demonstração (compara as 3 configurações e faz triagem)
 
 Rodar:  uvicorn src.api:app --port 8000
 """
 
+from pathlib import Path
+
 from fastapi import FastAPI
+from fastapi.responses import HTMLResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
@@ -31,6 +35,12 @@ class Pergunta(BaseModel):
 
 class Relato(BaseModel):
     texto: str
+
+
+@app.get("/", response_class=HTMLResponse)
+def demo():
+    """Tela de demonstração: pergunta nas 3 configurações lado a lado + triagem."""
+    return (Path(__file__).parent / "demo.html").read_text(encoding="utf-8")
 
 
 @app.get("/health")
