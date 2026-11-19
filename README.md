@@ -2,11 +2,16 @@
 
 Componente de **Inteligência** da CitizenTech *Rota Livre* — Global Solution 2026.2 · FIAP · 4ES.
 
-Uma **LLM local** (sem nuvem, sem CUDA) que responde dúvidas do cidadão sobre **buracos e
-obstáculos em vias e calçadas de São Paulo** com base em fontes oficiais, cita a fonte,
-responde em **JSON válido** e **recusa com "não consta"** o que a base não cobre — além de
-fazer a **triagem** de relatos para o MVP. Provamos no placar que a IA com contexto
-**acerta mais e alucina menos** que o mesmo modelo sem contexto.
+Uma **LLM local** (sem nuvem, sem CUDA) que ajuda o cidadão a **circular por São Paulo fugindo dos buracos**:
+
+1. **Rotas com menos buracos:** dado um trajeto (ex.: Sé → Pinheiros), recomenda a rota com o menor índice de
+   buracos por km e explica por quê, citando as vias. *Base de buracos por via simulada para o MVP.*
+2. **Dúvidas com fonte oficial:** responde sobre buracos, calçadas, SP156 e indenização com base em 36 trechos de
+   fontes oficiais (CTB, CF/88, Lei 15.442/2011, SP156), citando a fonte.
+3. **Triagem de relatos:** transforma o relato livre do cidadão em JSON (tipo, gravidade, órgão responsável).
+
+Em tudo, a IA responde em **JSON válido** e **recusa com "não consta"** o que a base não cobre. Os placares
+provam que a IA com contexto **acerta mais e alucina menos** que o mesmo modelo sem contexto.
 
 ## Integrantes
 
@@ -90,9 +95,11 @@ uvicorn src.api:app --port 8000
 
 ### 4. Tela de demonstração
 
-Com o `llama-server` e a API no ar, abra **http://127.0.0.1:8000**. A tela mostra, lado a lado, a resposta das
-3 configurações (sem contexto, RAG e agente) para a mesma pergunta, com a fonte citada, a confiança e os passos
-do agente, e faz a triagem de um relato livre em JSON.
+Com o `llama-server` e a API no ar, abra **http://127.0.0.1:8000**:
+- **Planejar rota com menos buracos:** escolha origem e destino; aparecem as 3 configurações lado a lado e o
+  **ranking das rotas** calculado pelo agente (vias, km, buracos e índice).
+- **Dúvidas:** a mesma pergunta nas 3 configurações, com fonte citada, confiança e passos do agente.
+- **Triagem:** um relato livre vira JSON.
 
 ### 5. API
 
@@ -107,6 +114,14 @@ e o log de passos do agente. Integração com o MVP: o app (repositório
 `tapa-buraco-devops`) chama `/triagem` ao receber um relato e `/perguntar` no chat de dúvidas.
 
 ## Resultados
+
+### Rotas com menos buracos (notebook 04, dados simulados)
+
+Placar em [`avaliacao/rotas_placar.md`](avaliacao/rotas_placar.md) — 12 casos (8 trajetos da base + 4 fora da base).
+O agente usa uma **ferramenta de ranking** (cálculo exato do índice de buracos) e a LLM só explica; o RAG precisa
+comparar os números sozinho; sem contexto, o modelo não tem os dados.
+
+### Dúvidas com fonte oficial (notebooks 01 a 03)
 
 | Configuração | Acurácia | Alucinação ↓ | JSON válido | Citação correta | Tempo médio |
 |---|---|---|---|---|---|

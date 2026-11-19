@@ -1,0 +1,479 @@
+{
+ "aviso": "DADOS SIMULADOS para o MVP Rota Livre. As vias existem, mas as contagens de buracos foram geradas para demonstração e NÃO representam a situação real. Em produção, viriam das solicitações de tapa-buraco do SP156 (Portal de Dados Abertos) e dos relatos do app.",
+ "fonte": "Base simulada de buracos por via — Rota Livre (nov/2026)",
+ "indice": "índice de buracos = (buracos abertos + buracos graves) / km; buracos graves contam em dobro. Quanto menor, melhor.",
+ "vias": {
+  "paulista": {
+   "nome": "Av. Paulista",
+   "km": 2.8,
+   "buracos_abertos": 4,
+   "graves": 0
+  },
+  "reboucas": {
+   "nome": "Av. Rebouças",
+   "km": 3.0,
+   "buracos_abertos": 18,
+   "graves": 5
+  },
+  "consolacao": {
+   "nome": "Rua da Consolação",
+   "km": 2.5,
+   "buracos_abertos": 9,
+   "graves": 2
+  },
+  "farialima": {
+   "nome": "Av. Brigadeiro Faria Lima",
+   "km": 3.6,
+   "buracos_abertos": 6,
+   "graves": 1
+  },
+  "brasil": {
+   "nome": "Av. Brasil",
+   "km": 2.4,
+   "buracos_abertos": 7,
+   "graves": 1
+  },
+  "23maio": {
+   "nome": "Av. 23 de Maio",
+   "km": 4.5,
+   "buracos_abertos": 12,
+   "graves": 3
+  },
+  "ibirapuera": {
+   "nome": "Av. Ibirapuera",
+   "km": 3.1,
+   "buracos_abertos": 8,
+   "graves": 2
+  },
+  "brigadeiro": {
+   "nome": "Av. Brigadeiro Luís Antônio",
+   "km": 3.4,
+   "buracos_abertos": 15,
+   "graves": 4
+  },
+  "cruzeiro": {
+   "nome": "Av. Cruzeiro do Sul",
+   "km": 4.2,
+   "buracos_abertos": 11,
+   "graves": 3
+  },
+  "santosdumont": {
+   "nome": "Av. Santos Dumont",
+   "km": 3.0,
+   "buracos_abertos": 5,
+   "graves": 1
+  },
+  "tiradentes": {
+   "nome": "Av. Tiradentes",
+   "km": 2.6,
+   "buracos_abertos": 6,
+   "graves": 1
+  },
+  "radial": {
+   "nome": "Radial Leste",
+   "km": 7.5,
+   "buracos_abertos": 20,
+   "graves": 6
+  },
+  "vergueiro": {
+   "nome": "Rua Vergueiro",
+   "km": 4.0,
+   "buracos_abertos": 10,
+   "graves": 2
+  },
+  "celso": {
+   "nome": "Av. Celso Garcia",
+   "km": 5.0,
+   "buracos_abertos": 16,
+   "graves": 4
+  },
+  "salim": {
+   "nome": "Av. Salim Farah Maluf",
+   "km": 5.5,
+   "buracos_abertos": 9,
+   "graves": 2
+  },
+  "paesbarros": {
+   "nome": "Av. Paes de Barros",
+   "km": 3.0,
+   "buracos_abertos": 7,
+   "graves": 1
+  },
+  "pompeia": {
+   "nome": "Av. Pompeia",
+   "km": 2.2,
+   "buracos_abertos": 6,
+   "graves": 1
+  },
+  "matarazzo": {
+   "nome": "Av. Francisco Matarazzo",
+   "km": 3.5,
+   "buracos_abertos": 13,
+   "graves": 3
+  },
+  "heitor": {
+   "nome": "Rua Heitor Penteado",
+   "km": 2.4,
+   "buracos_abertos": 8,
+   "graves": 2
+  },
+  "sumare": {
+   "nome": "Av. Sumaré",
+   "km": 2.6,
+   "buracos_abertos": 5,
+   "graves": 0
+  },
+  "marginal": {
+   "nome": "Marginal Pinheiros",
+   "km": 6.0,
+   "buracos_abertos": 22,
+   "graves": 5
+  },
+  "jafet": {
+   "nome": "Av. Ricardo Jafet",
+   "km": 4.0,
+   "buracos_abertos": 14,
+   "graves": 3
+  },
+  "dompedro": {
+   "nome": "Av. Dom Pedro I",
+   "km": 2.5,
+   "buracos_abertos": 6,
+   "graves": 1
+  },
+  "ipiranga": {
+   "nome": "Av. Ipiranga",
+   "km": 1.8,
+   "buracos_abertos": 10,
+   "graves": 2
+  },
+  "saojoao": {
+   "nome": "Av. São João",
+   "km": 2.0,
+   "buracos_abertos": 11,
+   "graves": 3
+  },
+  "amaral": {
+   "nome": "Rua Amaral Gurgel",
+   "km": 1.6,
+   "buracos_abertos": 7,
+   "graves": 1
+  },
+  "teodoro": {
+   "nome": "Rua Teodoro Sampaio",
+   "km": 2.3,
+   "buracos_abertos": 9,
+   "graves": 2
+  },
+  "alcantara": {
+   "nome": "Av. Alcântara Machado",
+   "km": 6.8,
+   "buracos_abertos": 12,
+   "graves": 2
+  }
+ },
+ "locais": {
+  "se": {
+   "nome": "Praça da Sé (Centro)",
+   "apelidos": [
+    "praca da se",
+    "da se",
+    "na se",
+    "a se",
+    "centro"
+   ]
+  },
+  "paulista": {
+   "nome": "Av. Paulista (MASP)",
+   "apelidos": [
+    "paulista",
+    "avenida paulista",
+    "masp"
+   ]
+  },
+  "pinheiros": {
+   "nome": "Pinheiros (Largo da Batata)",
+   "apelidos": [
+    "pinheiros",
+    "largo da batata"
+   ]
+  },
+  "ibirapuera": {
+   "nome": "Parque Ibirapuera",
+   "apelidos": [
+    "ibirapuera",
+    "parque ibirapuera"
+   ]
+  },
+  "santana": {
+   "nome": "Santana",
+   "apelidos": [
+    "santana"
+   ]
+  },
+  "tatuape": {
+   "nome": "Tatuapé",
+   "apelidos": [
+    "tatuape"
+   ]
+  },
+  "lapa": {
+   "nome": "Lapa",
+   "apelidos": [
+    "lapa"
+   ]
+  },
+  "mooca": {
+   "nome": "Mooca",
+   "apelidos": [
+    "mooca"
+   ]
+  }
+ },
+ "rotas": [
+  {
+   "id": "se-pinheiros-A",
+   "origem": "se",
+   "destino": "pinheiros",
+   "vias": [
+    "saojoao",
+    "amaral",
+    "consolacao",
+    "teodoro"
+   ],
+   "km": 8.4,
+   "buracos": 36,
+   "graves": 8,
+   "indice": 5.24
+  },
+  {
+   "id": "se-pinheiros-B",
+   "origem": "se",
+   "destino": "pinheiros",
+   "vias": [
+    "ipiranga",
+    "consolacao",
+    "reboucas"
+   ],
+   "km": 7.3,
+   "buracos": 37,
+   "graves": 9,
+   "indice": 6.3
+  },
+  {
+   "id": "se-pinheiros-C",
+   "origem": "se",
+   "destino": "pinheiros",
+   "vias": [
+    "brigadeiro",
+    "paulista",
+    "sumare",
+    "heitor"
+   ],
+   "km": 11.2,
+   "buracos": 32,
+   "graves": 6,
+   "indice": 3.39
+  },
+  {
+   "id": "paulista-ibirapuera-A",
+   "origem": "paulista",
+   "destino": "ibirapuera",
+   "vias": [
+    "brigadeiro",
+    "ibirapuera"
+   ],
+   "km": 6.5,
+   "buracos": 23,
+   "graves": 6,
+   "indice": 4.46
+  },
+  {
+   "id": "paulista-ibirapuera-B",
+   "origem": "paulista",
+   "destino": "ibirapuera",
+   "vias": [
+    "reboucas",
+    "brasil"
+   ],
+   "km": 5.4,
+   "buracos": 25,
+   "graves": 6,
+   "indice": 5.74
+  },
+  {
+   "id": "paulista-ibirapuera-C",
+   "origem": "paulista",
+   "destino": "ibirapuera",
+   "vias": [
+    "consolacao",
+    "23maio"
+   ],
+   "km": 7.0,
+   "buracos": 21,
+   "graves": 5,
+   "indice": 3.71
+  },
+  {
+   "id": "santana-se-A",
+   "origem": "santana",
+   "destino": "se",
+   "vias": [
+    "cruzeiro",
+    "tiradentes"
+   ],
+   "km": 6.8,
+   "buracos": 17,
+   "graves": 4,
+   "indice": 3.09
+  },
+  {
+   "id": "santana-se-B",
+   "origem": "santana",
+   "destino": "se",
+   "vias": [
+    "santosdumont",
+    "tiradentes"
+   ],
+   "km": 5.6,
+   "buracos": 11,
+   "graves": 2,
+   "indice": 2.32
+  },
+  {
+   "id": "santana-se-C",
+   "origem": "santana",
+   "destino": "se",
+   "vias": [
+    "cruzeiro",
+    "dompedro",
+    "saojoao"
+   ],
+   "km": 8.7,
+   "buracos": 28,
+   "graves": 7,
+   "indice": 4.02
+  },
+  {
+   "id": "tatuape-paulista-A",
+   "origem": "tatuape",
+   "destino": "paulista",
+   "vias": [
+    "radial",
+    "23maio"
+   ],
+   "km": 12.0,
+   "buracos": 32,
+   "graves": 9,
+   "indice": 3.42
+  },
+  {
+   "id": "tatuape-paulista-B",
+   "origem": "tatuape",
+   "destino": "paulista",
+   "vias": [
+    "celso",
+    "dompedro",
+    "consolacao"
+   ],
+   "km": 10.0,
+   "buracos": 31,
+   "graves": 7,
+   "indice": 3.8
+  },
+  {
+   "id": "tatuape-paulista-C",
+   "origem": "tatuape",
+   "destino": "paulista",
+   "vias": [
+    "salim",
+    "paesbarros",
+    "vergueiro"
+   ],
+   "km": 12.5,
+   "buracos": 26,
+   "graves": 5,
+   "indice": 2.48
+  },
+  {
+   "id": "lapa-pinheiros-A",
+   "origem": "lapa",
+   "destino": "pinheiros",
+   "vias": [
+    "pompeia",
+    "sumare",
+    "heitor"
+   ],
+   "km": 7.2,
+   "buracos": 19,
+   "graves": 3,
+   "indice": 3.06
+  },
+  {
+   "id": "lapa-pinheiros-B",
+   "origem": "lapa",
+   "destino": "pinheiros",
+   "vias": [
+    "matarazzo",
+    "teodoro"
+   ],
+   "km": 5.8,
+   "buracos": 22,
+   "graves": 5,
+   "indice": 4.66
+  },
+  {
+   "id": "lapa-pinheiros-C",
+   "origem": "lapa",
+   "destino": "pinheiros",
+   "vias": [
+    "marginal"
+   ],
+   "km": 6.0,
+   "buracos": 22,
+   "graves": 5,
+   "indice": 4.5
+  },
+  {
+   "id": "mooca-ibirapuera-A",
+   "origem": "mooca",
+   "destino": "ibirapuera",
+   "vias": [
+    "paesbarros",
+    "jafet",
+    "ibirapuera"
+   ],
+   "km": 10.1,
+   "buracos": 29,
+   "graves": 6,
+   "indice": 3.47
+  },
+  {
+   "id": "mooca-ibirapuera-B",
+   "origem": "mooca",
+   "destino": "ibirapuera",
+   "vias": [
+    "alcantara",
+    "23maio"
+   ],
+   "km": 11.3,
+   "buracos": 24,
+   "graves": 5,
+   "indice": 2.57
+  },
+  {
+   "id": "mooca-ibirapuera-C",
+   "origem": "mooca",
+   "destino": "ibirapuera",
+   "vias": [
+    "paesbarros",
+    "vergueiro",
+    "ibirapuera"
+   ],
+   "km": 10.1,
+   "buracos": 25,
+   "graves": 5,
+   "indice": 2.97
+  }
+ ]
+}

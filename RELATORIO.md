@@ -115,6 +115,27 @@ Erros reais tirados de `avaliacao/resultados.json` (notebook 03):
 | 4 | q11 | agente | O RAG acertou (Ouvidoria), mas o agente recusou: a autocrítica disse "NÃO" para uma resposta correta | **Falso negativo do revisor**: o mesmo modelo de 3B, como juiz, é instável em respostas SIM/NÃO | Aplicar a autocrítica só quando a confiança for baixa ou o score da busca ficar perto do limiar; ou usar 2 votos e decidir pela maioria |
 | 5 | q19 | rag e agente | Resposta **correta** (Portal SP156, app, WhatsApp) contada como erro porque não traz a palavra "protocolo" | **Erro da métrica**, não do modelo: a correção por palavra-chave é rígida demais | Ampliar as palavras-chave aceitas (ex.: "Acompanhe sua solicitação") ou usar a LLM como juiz comparando com o gabarito. Com isso a acurácia real do RAG e do agente é maior que a do placar |
 
+## 6b. Extensão: rotas com menos buracos (notebook 04)
+
+O objetivo do Rota Livre é levar o cidadão pelo **caminho com menos buracos**. Para isso, a IA recebe um trajeto
+e recomenda a rota com o menor **índice de buracos** = (buracos abertos + graves) / km.
+
+- **Base:** `base/vias_simuladas.json`, com 28 vias de São Paulo, 8 locais e 18 rotas candidatas (3 por trajeto).
+  **Os dados são simulados:** as vias existem, mas as contagens foram geradas para o MVP. Em produção, viriam das
+  solicitações de tapa-buraco do SP156 (Portal de Dados Abertos) e dos relatos do app.
+- **Testes:** `avaliacao/casos_rotas.json`, com 12 casos (8 trajetos da base e 4 fora dela, que devem ser recusados).
+- **Configurações:** sem contexto (LLM sozinha) · RAG (busca os textos das rotas e a LLM compara os números) ·
+  **agente** (identifica origem e destino, usa a ferramenta de ranking com cálculo exato, a LLM explica, a rota
+  citada é validada e trajetos fora da base são recusados).
+
+Placar (`avaliacao/rotas_placar.md`):
+
+[PREENCHER com a tabela gerada pelo notebook 04]
+
+**Leitura:** em uma decisão numérica, a especialização por **agente com ferramenta** é a configuração adequada:
+o cálculo fica com código determinístico e a LLM fica com a explicação. O RAG simples depende de o modelo de 3B
+comparar índices corretamente.
+
 ## 7. Conclusão técnica e links
 
 Um modelo pequeno (Qwen2.5-3B, 2 GB) rodando 100% local em GPU AMD RX 6600, sem CUDA e sem

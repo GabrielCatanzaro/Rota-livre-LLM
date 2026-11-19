@@ -1,0 +1,131 @@
+{
+  "descricao": "Casos de teste das rotas com menos buracos (dados simulados). O gabarito é a rota de menor índice de buracos do trajeto; trajetos fora da base devem ser recusados com 'não consta'.",
+  "casos": [
+    {
+      "id": "r01",
+      "pergunta": "Qual o caminho com menos buracos da Praça da Sé até Pinheiros?",
+      "tipo": "respondivel",
+      "trajeto": [
+        "se",
+        "pinheiros"
+      ],
+      "gabarito_rota": "se-pinheiros-C",
+      "gabarito": "Rota se-pinheiros-C de Praça da Sé (Centro) até Pinheiros (Largo da Batata) (vale nos dois sentidos): via Av. Brigadeiro Luís Antônio → Av. Paulista → Av. Sumaré → Rua Heitor Penteado. Distância 11.2 km, 32 buracos abertos, 6 graves, índice de buracos 3.39 por km."
+    },
+    {
+      "id": "r02",
+      "pergunta": "Vou da Avenida Paulista até o Parque Ibirapuera de moto, qual rota tem menos buracos?",
+      "tipo": "respondivel",
+      "trajeto": [
+        "paulista",
+        "ibirapuera"
+      ],
+      "gabarito_rota": "paulista-ibirapuera-C",
+      "gabarito": "Rota paulista-ibirapuera-C de Av. Paulista (MASP) até Parque Ibirapuera (vale nos dois sentidos): via Rua da Consolação → Av. 23 de Maio. Distância 7.0 km, 21 buracos abertos, 5 graves, índice de buracos 3.71 por km."
+    },
+    {
+      "id": "r03",
+      "pergunta": "Qual a rota com menos buracos de Santana até o centro?",
+      "tipo": "respondivel",
+      "trajeto": [
+        "santana",
+        "se"
+      ],
+      "gabarito_rota": "santana-se-B",
+      "gabarito": "Rota santana-se-B de Santana até Praça da Sé (Centro) (vale nos dois sentidos): via Av. Santos Dumont → Av. Tiradentes. Distância 5.6 km, 11 buracos abertos, 2 graves, índice de buracos 2.32 por km."
+    },
+    {
+      "id": "r04",
+      "pergunta": "Do Tatuapé para a Paulista, qual caminho evita mais buracos?",
+      "tipo": "respondivel",
+      "trajeto": [
+        "tatuape",
+        "paulista"
+      ],
+      "gabarito_rota": "tatuape-paulista-C",
+      "gabarito": "Rota tatuape-paulista-C de Tatuapé até Av. Paulista (MASP) (vale nos dois sentidos): via Av. Salim Farah Maluf → Av. Paes de Barros → Rua Vergueiro. Distância 12.5 km, 26 buracos abertos, 5 graves, índice de buracos 2.48 por km."
+    },
+    {
+      "id": "r05",
+      "pergunta": "Saindo da Lapa para o Largo da Batata, qual rota tem menos buraco?",
+      "tipo": "respondivel",
+      "trajeto": [
+        "lapa",
+        "pinheiros"
+      ],
+      "gabarito_rota": "lapa-pinheiros-A",
+      "gabarito": "Rota lapa-pinheiros-A de Lapa até Pinheiros (Largo da Batata) (vale nos dois sentidos): via Av. Pompeia → Av. Sumaré → Rua Heitor Penteado. Distância 7.2 km, 19 buracos abertos, 3 graves, índice de buracos 3.06 por km."
+    },
+    {
+      "id": "r06",
+      "pergunta": "Qual o melhor caminho da Mooca até o Ibirapuera para fugir dos buracos?",
+      "tipo": "respondivel",
+      "trajeto": [
+        "mooca",
+        "ibirapuera"
+      ],
+      "gabarito_rota": "mooca-ibirapuera-B",
+      "gabarito": "Rota mooca-ibirapuera-B de Mooca até Parque Ibirapuera (vale nos dois sentidos): via Av. Alcântara Machado → Av. 23 de Maio. Distância 11.3 km, 24 buracos abertos, 5 graves, índice de buracos 2.57 por km."
+    },
+    {
+      "id": "r07",
+      "pergunta": "Qual rota tem menos buracos de Pinheiros até a Sé?",
+      "tipo": "respondivel",
+      "trajeto": [
+        "pinheiros",
+        "se"
+      ],
+      "gabarito_rota": "se-pinheiros-C",
+      "gabarito": "Rota se-pinheiros-C de Praça da Sé (Centro) até Pinheiros (Largo da Batata) (vale nos dois sentidos): via Av. Brigadeiro Luís Antônio → Av. Paulista → Av. Sumaré → Rua Heitor Penteado. Distância 11.2 km, 32 buracos abertos, 6 graves, índice de buracos 3.39 por km."
+    },
+    {
+      "id": "r08",
+      "pergunta": "Do MASP até o Ibirapuera, por onde eu vou para pegar menos buraco?",
+      "tipo": "respondivel",
+      "trajeto": [
+        "paulista",
+        "ibirapuera"
+      ],
+      "gabarito_rota": "paulista-ibirapuera-C",
+      "gabarito": "Rota paulista-ibirapuera-C de Av. Paulista (MASP) até Parque Ibirapuera (vale nos dois sentidos): via Rua da Consolação → Av. 23 de Maio. Distância 7.0 km, 21 buracos abertos, 5 graves, índice de buracos 3.71 por km."
+    },
+    {
+      "id": "r09",
+      "pergunta": "Qual o caminho com menos buracos de Guarulhos até Santo André?",
+      "tipo": "nao_consta",
+      "trajeto": null,
+      "gabarito_rota": null,
+      "gabarito": "não consta"
+    },
+    {
+      "id": "r10",
+      "pergunta": "Qual rota tem menos buracos da Lapa até o Tatuapé?",
+      "tipo": "nao_consta",
+      "trajeto": [
+        "lapa",
+        "tatuape"
+      ],
+      "gabarito_rota": null,
+      "gabarito": "não consta"
+    },
+    {
+      "id": "r11",
+      "pergunta": "Qual o caminho com menos buracos de Campinas até a Sé?",
+      "tipo": "nao_consta",
+      "trajeto": null,
+      "gabarito_rota": null,
+      "gabarito": "não consta"
+    },
+    {
+      "id": "r12",
+      "pergunta": "Qual rota da Mooca até Santana tem menos buracos?",
+      "tipo": "nao_consta",
+      "trajeto": [
+        "mooca",
+        "santana"
+      ],
+      "gabarito_rota": null,
+      "gabarito": "não consta"
+    }
+  ]
+}

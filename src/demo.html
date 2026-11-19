@@ -39,17 +39,40 @@
   .tag { font-size:.7rem; padding:2px 8px; border-radius:99px; background:var(--cinza); }
   .triagem-res { display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; }
   .triagem-res span { background:#fff4e6; border-radius:8px; padding:6px 10px; font-size:.85rem; }
+  select { padding:10px; border:1px solid var(--borda); border-radius:8px; font:inherit; background:#fff; min-width:200px; }
+  .aviso { font-size:.78rem; background:#fff9db; border:1px solid #ffe066; border-radius:8px; padding:8px 10px; margin-bottom:10px; }
+  .rota-vias { margin-top:8px; font-size:.8rem; background:#ebfbee; border-radius:6px; padding:6px 8px; }
+  table.rk { width:100%; border-collapse:collapse; margin-top:14px; font-size:.85rem; }
+  table.rk th, table.rk td { border-bottom:1px solid var(--borda); padding:7px 6px; text-align:left; vertical-align:top; }
+  table.rk tr.melhor td { background:#ebfbee; font-weight:600; }
+  .barra { height:10px; background:var(--laranja); border-radius:5px; }
 </style>
 </head>
 <body>
 <header>
   <div>
     <h1>🛣️ Rota <span>Livre</span> · IA local</h1>
-    <p>Qwen2.5-3B rodando na GPU desta máquina (llama.cpp + Vulkan) · base com 36 trechos de fontes oficiais</p>
+    <p>Qwen2.5-3B rodando na GPU desta máquina (llama.cpp + Vulkan) · rotas com menos buracos · dúvidas com fontes oficiais · triagem</p>
   </div>
   <div id="status">verificando a LLM...</div>
 </header>
 <main>
+  <section class="card">
+    <h2>🗺️ Planejar rota com menos buracos</h2>
+    <div class="aviso" id="aviso-rotas">⚠️ Dados simulados para o MVP.</div>
+    <div class="linha">
+      <select id="origem"></select>
+      <select id="destino"></select>
+      <button id="btn-rota">Planejar rota</button>
+    </div>
+    <div class="linha" style="margin-top:8px">
+      <input id="pergunta-rota" placeholder="ou escreva: Qual o caminho com menos buracos da Sé até Pinheiros?">
+      <button id="btn-rota-txt">Perguntar</button>
+    </div>
+    <div class="tres" id="rotas-respostas"></div>
+    <div id="ranking"></div>
+  </section>
+
   <section class="card">
     <h2>💬 Pergunte e compare as 3 configurações</h2>
     <div class="linha">
@@ -160,6 +183,83 @@ $("#btn-perguntar").onclick = perguntar;
 $("#pergunta").addEventListener("keydown", e => { if (e.key === "Enter") perguntar(); });
 $("#btn-triagem").onclick = triagem;
 status(); setInterval(status, 15000);
+const MODOS_ROTA = [
+  ["sem_contexto", "1. Sem contexto", "o modelo sozinho, sem dados de buracos"],
+  ["rag", "2. RAG", "busca as rotas parecidas e a LLM compara os números"],
+  ["agente", "3. Agente", "identifica o trajeto, usa a ferramenta de ranking e a LLM explica"],
+];
+
+async function carregarLocais() {
+  try {
+    const d = await (await fetch("/rotas/locais")).json();
+    $("#aviso-rotas").textContent = "⚠️ " + d.aviso;
+    for (const sel of ["#origem", "#destino"]) {
+      $(sel).replaceChildren(...d.locais.map(l => { const o = el("option", "", l.nome); o.value = l.nome; return o; }));
+    }
+    $("#origem").value = "Praça da Sé (Centro)"; $("#destino").value = "Pinheiros (Largo da Batata)";
+  } catch (e) { $("#aviso-rotas").textContent = "não consegui carregar os locais: " + e; }
+}
+
+function cardRota(modo, dados, ms) {
+  const c = document.getElementById("rr-" + modo);
+  c.querySelector(".tag").textContent = (ms / 1000).toFixed(1) + " s";
+  const r = dados.resposta || {};
+  const texto = r.resposta === undefined ? "(o modelo não devolveu um JSON válido)" : String(r.resposta);
+  const t = c.querySelector(".texto"); t.textContent = texto;
+  const recusou = texto.toLowerCase().startsWith("não consta") || texto.toLowerCase().startsWith("nao consta");
+  if (recusou) t.classList.add("recusa");
+  if (dados.rota) {
+    c.append(el("div", "rota-vias", "🛣️ " + dados.rota.id + ": " + dados.rota.vias_nomes.join(" → ") +
+      " · " + dados.rota.km + " km · " + dados.rota.buracos + " buracos (" + dados.rota.graves + " graves) · índice " + dados.rota.indice));
+  } else if (!recusou) {
+    c.append(el("div", "fonte nenhuma", r.rota_id ? "⚠️ rota citada não existe na base: " + r.rota_id : "⚠️ não citou nenhuma rota da base"));
+  }
+  if (dados.passos && dados.passos.length) {
+    const d = el("details"); d.append(el("summary", "", "ver os passos (" + dados.passos.length + ")"));
+    const ol = el("ol"); dados.passos.forEach(p => ol.append(el("li", "", p))); d.append(ol); c.append(d);
+  }
+}
+
+function desenharRanking(ranking) {
+  const box = $("#ranking"); box.replaceChildren();
+  if (!ranking || !ranking.length) return;
+  box.append(el("h3", "", "Ranking calculado pelo agente (menor índice = menos buracos por km)"));
+  const max = Math.max(...ranking.map(r => r.indice));
+  const tb = el("table", "rk");
+  const cab = el("tr"); ["", "Rota", "Vias", "km", "Buracos (graves)", "Índice"].forEach(h => cab.append(el("th", "", h))); tb.append(cab);
+  ranking.forEach((r, i) => {
+    const tr = el("tr", i === 0 ? "melhor" : "");
+    const barra = el("div", "barra"); barra.style.width = Math.round(100 * r.indice / max) + "%";
+    const tdBarra = el("td"); tdBarra.append(el("div", "", String(r.indice)), barra);
+    [i === 0 ? "✅" : String(i + 1), r.id, r.vias_nomes.join(" → "), String(r.km), r.buracos + " (" + r.graves + ")"].forEach(v => tr.append(el("td", "", v)));
+    tr.append(tdBarra); tb.append(tr);
+  });
+  box.append(tb);
+}
+
+async function planejar(pergunta) {
+  if (!pergunta) return;
+  $("#btn-rota").disabled = $("#btn-rota-txt").disabled = true;
+  const area = $("#rotas-respostas"); area.replaceChildren(); $("#ranking").replaceChildren();
+  MODOS_ROTA.forEach(([m, t, s]) => { const c = cardVazio(m, t, s); c.id = "rr-" + m; area.append(c); });
+  await Promise.all(MODOS_ROTA.map(async ([modo]) => {
+    const t0 = performance.now();
+    try {
+      const r = await fetch("/rota", { method:"POST", headers:{"Content-Type":"application/json"},
+        body: JSON.stringify({ pergunta, modo }) });
+      const d = await r.json();
+      cardRota(modo, d, performance.now() - t0);
+      if (modo === "agente") desenharRanking(d.ranking);
+    } catch (e) { document.getElementById("rr-" + modo).querySelector(".texto").textContent = "erro: " + e; }
+  }));
+  $("#btn-rota").disabled = $("#btn-rota-txt").disabled = false;
+}
+
+$("#btn-rota").onclick = () => planejar("Qual o caminho com menos buracos de " + $("#origem").value + " até " + $("#destino").value + "?");
+$("#btn-rota-txt").onclick = () => planejar($("#pergunta-rota").value.trim());
+$("#pergunta-rota").addEventListener("keydown", e => { if (e.key === "Enter") planejar($("#pergunta-rota").value.trim()); });
+carregarLocais();
+
 </script>
 </body>
 </html>

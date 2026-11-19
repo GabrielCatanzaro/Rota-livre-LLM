@@ -4,7 +4,9 @@ Expõe a IA para o MVP:
 - POST /perguntar  → resposta fundamentada em JSON (modo: sem_contexto | rag | agente)
 - POST /triagem    → transforma o relato livre do cidadão em um JSON estruturado
 - GET  /health     → status da API e da LLM local
-- GET  /           → tela de demonstração (compara as 3 configurações e faz triagem)
+- POST /rota       → rota com menos buracos (modo: sem_contexto | rag | agente) — dados simulados
+- GET  /rotas/locais → origens/destinos conhecidos na base de rotas
+- GET  /           → tela de demonstração (perguntas, rotas e triagem)
 
 Rodar:  uvicorn src.api:app --port 8000
 """
@@ -16,7 +18,7 @@ from fastapi.responses import HTMLResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-from . import llm
+from . import llm, rotas
 from .busca import Busca
 from .configuracoes import CONFIGURACOES
 
@@ -87,3 +89,21 @@ def triagem(r: Relato):
                "descricao_curta": r.texto[:120], "orgao_sugerido": "Subprefeitura",
                "local_citado": None, "observacao": "triagem automática indisponível"}
     return {"triagem": obj}
+
+
+class PedidoRota(BaseModel):
+    pergunta: str
+    modo: str = "agente"
+
+
+@app.get("/rotas/locais")
+def rotas_locais():
+    return {"locais": [{"id": k, "nome": v["nome"]} for k, v in rotas.LOCAIS.items()],
+            "aviso": rotas.DADOS["aviso"]}
+
+
+@app.post("/rota")
+def rota(p: PedidoRota):
+    r = rotas.responder(p.pergunta, p.modo)
+    return {"modo": r["config"], "resposta": r["json"], "rota": r["rota"],
+            "ranking": r["ranking"], "passos": r["passos"]}
