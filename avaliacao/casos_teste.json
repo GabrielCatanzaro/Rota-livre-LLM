@@ -1,5 +1,5 @@
 {
-  "descricao": "Conjunto de teste do Tapa Buraco. Cada caso tem a pergunta, o gabarito esperado, palavras-chave para correção automática, os ids dos trechos relevantes da base (para medir recall@1 e recall@3) e o tipo: 'respondivel' ou 'nao_consta'.",
+  "descricao": "Conjunto de teste do Rota Livre. Cada caso tem a pergunta, o gabarito esperado, palavras-chave para correção automática, os ids dos trechos relevantes da base (para medir recall@1 e recall@3) e o tipo: 'respondivel' ou 'nao_consta'.",
   "casos": [
     {
       "id": "q01",

@@ -1,4 +1,4 @@
-"""API do assistente Tapa Buraco (FastAPI).
+"""API do assistente Rota Livre (FastAPI).
 
 Expõe a IA para o MVP:
 - POST /perguntar  → resposta fundamentada em JSON (modo: sem_contexto | rag | agente)
@@ -16,7 +16,7 @@ from . import llm
 from .busca import Busca
 from .configuracoes import CONFIGURACOES
 
-app = FastAPI(title="Tapa Buraco - IA", version="1.0")
+app = FastAPI(title="Rota Livre - IA", version="1.0")
 app.add_middleware(
     CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"]
 )

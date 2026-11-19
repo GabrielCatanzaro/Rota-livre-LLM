@@ -1,4 +1,4 @@
-# Relatório — Tapa Buraco · Treinamento de uma LLM local
+# Relatório — Rota Livre · Treinamento de uma LLM local
 
 Generative AI for Engineering · Global Solution 2026.2 · FIAP · Engenharia de Software 4ES
 
@@ -12,7 +12,7 @@ Generative AI for Engineering · Global Solution 2026.2 · FIAP · Engenharia de
 
 ## 2. Ficha Técnica — o que a IA resolve
 
-- **Produto:** Tapa Buraco — CitizenTech de reporte e orientação sobre buracos e obstáculos
+- **Produto:** Rota Livre — CitizenTech de reporte e orientação sobre buracos e obstáculos
   em vias e calçadas do município de São Paulo.
 - **Cidadão e território:** morador de São Paulo que convive com buracos na via, calçadas
   quebradas e obstáculos — motorista, motociclista, ciclista, pedestre, pessoa com deficiência.
@@ -46,7 +46,7 @@ flowchart LR
         L --> V[Valida JSON e citacao] --> C[Autocritica: trecho sustenta?] --> J
         S -. score baixo .-> Q[Reformula a consulta] -.-> S
     end
-    J --> API[FastAPI /perguntar e /triagem] --> MVP[MVP Tapa Buraco]
+    J --> API[FastAPI /perguntar e /triagem] --> MVP[MVP Rota Livre]
 ```
 
 (O GitHub renderiza o diagrama Mermaid acima diretamente no README/relatório.)
@@ -91,6 +91,8 @@ Placar (notebook 03 / `avaliacao/placar.md`), 27 casos (22 respondíveis + 5 "n�
   com fonte errada é pior que um "não consta", escolhemos o **agente** como configuração do MVP.
 
 **Demonstração de alucinação (sem contexto, `avaliacao/resultados.json`):**
+
+> Os testes foram executados quando o produto ainda se chamava *Tapa Buraco*; por isso esse nome aparece nas saídas registradas do modelo.
 
 | Caso | Pergunta | Saída do modelo sem contexto |
 |---|---|---|

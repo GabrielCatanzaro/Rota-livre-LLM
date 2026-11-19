@@ -1,6 +1,6 @@
-# Tapa Buraco — IA (Generative AI for Engineering)
+# Rota Livre — IA (Generative AI for Engineering)
 
-Componente de **Inteligência** da CitizenTech *Tapa Buraco* — Global Solution 2026.2 · FIAP · 4ES.
+Componente de **Inteligência** da CitizenTech *Rota Livre* — Global Solution 2026.2 · FIAP · 4ES.
 
 Uma **LLM local** (sem nuvem, sem CUDA) que responde dúvidas do cidadão sobre **buracos e
 obstáculos em vias e calçadas de São Paulo** com base em fontes oficiais, cita a fonte,
