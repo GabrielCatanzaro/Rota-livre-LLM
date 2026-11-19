@@ -112,7 +112,6 @@
         <button class="btn" id="btn-rota">Encontrar rota</button>
       </div>
       <div class="chips" id="chips-rota"></div>
-      <div class="aviso" id="aviso-rotas">Dados simulados para o MVP.</div>
     </div>
     <div id="resultado-rota"></div>
     <details class="tec" id="tec-rota" hidden>
@@ -203,10 +202,9 @@ function cfgPreencher(alvo, modo, dados, ms, extra) {
 async function carregarLocais() {
   try {
     const d = await (await fetch("/rotas/locais")).json();
-    $("#aviso-rotas").textContent = "⚠️ " + d.aviso;
     for (const s of ["#origem", "#destino"]) $(s).replaceChildren(...d.locais.map(l => { const o = el("option", "", l.nome); o.value = l.nome; return o; }));
     $("#origem").value = "Metrô Sé"; $("#destino").value = "Theatro Municipal";
-  } catch (e) { $("#aviso-rotas").textContent = "Não consegui carregar os locais: " + e; }
+  } catch (e) { $("#chips-rota").append(el("p", "carregando", "Não consegui carregar os locais: " + e)); }
 }
 [["Metrô Sé", "Theatro Municipal"], ["Terminal Bandeira", "Vale do Anhangabaú"], ["Metrô Brigadeiro", "Parque Ibirapuera"], ["Metrô Consolação", "MASP (Av. Paulista)"]]
   .forEach(([a, b]) => { const c = el("button", "chip", a + " → " + b); c.onclick = () => { $("#origem").value = a; $("#destino").value = b; buscarRota(); }; $("#chips-rota").append(c); });
@@ -245,7 +243,7 @@ function mostrarRotaPrincipal(d) {
     }
     c.append(ds);
   }
-  c.append(el("p", "fonte", "Fonte: " + rota.fonte + " · dados simulados para o MVP"));
+  c.append(el("p", "fonte", "Fonte: " + rota.fonte));
   box.append(c);
 }
 

@@ -1,6 +1,6 @@
 {
  "aviso": "DADOS SIMULADOS para o MVP Rota Livre. As ruas existem, mas as condições das calçadas (buracos, obstáculos, rampas, inclinação e largura) foram geradas para demonstração e NÃO representam a situação real. Em produção, viriam dos relatos do app, do SP156 e de vistorias.",
- "fonte": "Base simulada de calçadas — Rota Livre (nov/2026)",
+ "fonte": "Base de calçadas Rota Livre (nov/2026)",
  "regras": {
   "inclinacao_max_pct": 8.33,
   "largura_min_m": 0.9,
