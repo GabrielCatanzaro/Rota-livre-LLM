@@ -2,7 +2,7 @@
 
 Componente de **Inteligência** da CitizenTech *Rota Livre* — Global Solution 2026.2 · FIAP · 4ES.
 
-Uma **LLM local** (sem nuvem, sem CUDA) que ajuda **pessoas com mobilidade reduzida (cadeirantes, idosos,
+Uma LLM que ajuda **pessoas com mobilidade reduzida (cadeirantes, idosos,
 pessoas com andador ou muletas)** a circular a pé por São Paulo **sem barreiras**:
 
 1. **Rota acessível:** dado um trajeto (ex.: Metrô Sé → Theatro Municipal), descarta os caminhos com escada,
@@ -22,7 +22,7 @@ provam que a IA com contexto **acerta mais e alucina menos** que o mesmo modelo 
 |---|---|
 | Gabriel Gomes Catanzaro | RM93445 |
 | Lucas Gomes Alcantara | RM98766 |
-| Filipe Prado Menezes | RM98765 |
+| Henrique Canali Cuzato | RM551326 |
 
 ## Arquitetura
 
