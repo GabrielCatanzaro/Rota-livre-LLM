@@ -115,26 +115,33 @@ Erros reais tirados de `avaliacao/resultados.json` (notebook 03):
 | 4 | q11 | agente | O RAG acertou (Ouvidoria), mas o agente recusou: a autocrítica disse "NÃO" para uma resposta correta | **Falso negativo do revisor**: o mesmo modelo de 3B, como juiz, é instável em respostas SIM/NÃO | Aplicar a autocrítica só quando a confiança for baixa ou o score da busca ficar perto do limiar; ou usar 2 votos e decidir pela maioria |
 | 5 | q19 | rag e agente | Resposta **correta** (Portal SP156, app, WhatsApp) contada como erro porque não traz a palavra "protocolo" | **Erro da métrica**, não do modelo: a correção por palavra-chave é rígida demais | Ampliar as palavras-chave aceitas (ex.: "Acompanhe sua solicitação") ou usar a LLM como juiz comparando com o gabarito. Com isso a acurácia real do RAG e do agente é maior que a do placar |
 
-## 6b. Extensão: rotas com menos buracos (notebook 04)
+## 6b. Extensão: rota acessível para cadeira de rodas (notebook 04)
 
-O objetivo do Rota Livre é levar o cidadão pelo **caminho com menos buracos**. Para isso, a IA recebe um trajeto
-e recomenda a rota com o menor **índice de buracos** = (buracos abertos + graves) / km.
+O foco do Rota Livre é a **pessoa com mobilidade reduzida**. Para um cadeirante, o caminho mais curto muitas vezes é
+impossível (escada, esquina sem rampa, ladeira). A IA recebe um trajeto, **descarta as rotas bloqueadas** e recomenda,
+entre as acessíveis, a de menor **índice** = (buracos + obstáculos) / 100 m.
 
-- **Base:** `base/vias_simuladas.json`, com 28 vias de São Paulo, 8 locais e 18 rotas candidatas (3 por trajeto).
-  **Os dados são simulados:** as vias existem, mas as contagens foram geradas para o MVP. Em produção, viriam das
-  solicitações de tapa-buraco do SP156 (Portal de Dados Abertos) e dos relatos do app.
-- **Testes:** `avaliacao/casos_rotas.json`, com 12 casos (8 trajetos da base e 4 fora dela, que devem ser recusados).
-- **Configurações:** sem contexto (LLM sozinha) · RAG (busca os textos das rotas e a LLM compara os números) ·
-  **agente** (identifica origem e destino, usa a ferramenta de ranking com cálculo exato, a LLM explica, a rota
-  citada é validada e trajetos fora da base são recusados).
+- **Regras de bloqueio:** escada; travessia sem rampa; inclinação acima de 8,33% (NBR 9050); faixa livre menor
+  que 0,90 m.
+- **Base:** `base/calcadas_simuladas.json`, com 28 trechos de calçada em São Paulo, 12 locais e 18 rotas candidatas
+  (3 por trajeto). **Os dados são simulados:** os lugares existem, mas as medições foram geradas para o MVP. Em
+  produção, viriam do mapeamento de calçadas da Prefeitura, das solicitações do SP156 e dos relatos do app.
+  Em 4 dos 6 trajetos, a rota mais curta é bloqueada (de propósito, para testar se a IA cai nessa armadilha).
+- **Testes:** `avaliacao/casos_rotas.json`, com 12 casos (8 trajetos da base, incluindo sentido inverso, e 4 fora
+  dela, que devem ser recusados com "não consta").
+- **Métricas:** acerto da rota, **recomendou rota bloqueada** (erro grave: mandaria o cadeirante para uma escada),
+  recusa correta, alucinação (rota inexistente), JSON válido e tempo.
+- **Configurações:** sem contexto (LLM sozinha) · RAG (busca as descrições das rotas e a LLM escolhe) ·
+  **agente** (identifica origem e destino, usa a ferramenta que exclui as bloqueadas e ordena pelo índice, a LLM
+  explica, a rota citada é validada e trajetos fora da base são recusados).
 
 Placar (`avaliacao/rotas_placar.md`):
 
 [PREENCHER com a tabela gerada pelo notebook 04]
 
-**Leitura:** em uma decisão numérica, a especialização por **agente com ferramenta** é a configuração adequada:
-o cálculo fica com código determinístico e a LLM fica com a explicação. O RAG simples depende de o modelo de 3B
-comparar índices corretamente.
+**Leitura:** quando o erro pode colocar uma pessoa em risco, a decisão de acessibilidade não deve ficar com o modelo
+de 3B. A especialização por **agente com ferramenta** é a configuração adequada: regras e cálculo ficam com código
+determinístico e verificável, e a LLM fica com a explicação em linguagem simples.
 
 ## 7. Conclusão técnica e links
 

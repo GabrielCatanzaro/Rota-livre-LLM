@@ -4,7 +4,7 @@ Expõe a IA para o MVP:
 - POST /perguntar  → resposta fundamentada em JSON (modo: sem_contexto | rag | agente)
 - POST /triagem    → transforma o relato livre do cidadão em um JSON estruturado
 - GET  /health     → status da API e da LLM local
-- POST /rota       → rota com menos buracos (modo: sem_contexto | rag | agente) — dados simulados
+- POST /rota       → rota acessível para cadeira de rodas (modo: sem_contexto | rag | agente) — dados simulados
 - GET  /rotas/locais → origens/destinos conhecidos na base de rotas
 - GET  /           → tela de demonstração (perguntas, rotas e triagem)
 

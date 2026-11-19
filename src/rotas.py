@@ -1,19 +1,20 @@
-"""Rotas com menos buracos (extensão do Rota Livre).
+"""Rotas acessíveis para pessoas com mobilidade reduzida (extensão do Rota Livre).
 
-Dada uma pergunta como "qual o caminho com menos buracos da Sé até Pinheiros?",
-a IA recomenda a rota com o menor índice de buracos, citando os dados.
+Dada uma pergunta como "qual o caminho acessível do Metrô Sé até o Theatro Municipal?",
+a IA recomenda, para quem usa cadeira de rodas, a rota pela calçada que:
+1. NÃO tem bloqueios — escada, travessia sem rampa (guia rebaixada), inclinação acima
+   de 8,33% (limite de rampa da NBR 9050) ou passagem com menos de 0,90 m;
+2. entre as acessíveis, tem o menor índice = (buracos + obstáculos) a cada 100 m.
 
-Base: base/vias_simuladas.json — DADOS SIMULADOS (as vias existem, as contagens
-foram geradas para o MVP). Em produção viriam do SP156 e dos relatos do app.
+Base: base/calcadas_simuladas.json — DADOS SIMULADOS (as ruas existem, as condições
+das calçadas foram geradas para o MVP). Em produção viriam dos relatos do app e do SP156.
 
 Mesmas três configurações do projeto:
 1. sem_contexto — a LLM sozinha, sem os dados (tende a inventar rota).
-2. rag          — busca TF-IDF os textos das rotas e a LLM escolhe comparando os números.
-3. agente       — identifica origem/destino, usa a FERRAMENTA de ranking (cálculo
-                  exato) e a LLM só explica; valida o JSON e garante que a rota citada
-                  é a do topo do ranking; recusa se o trajeto não está na base.
-
-Índice de buracos = (buracos abertos + graves) / km — graves contam em dobro.
+2. rag          — busca os textos das rotas e a LLM decide sozinha (bloqueios + números).
+3. agente       — identifica origem/destino, usa a FERRAMENTA que exclui as rotas
+                  bloqueadas e ordena as acessíveis; a LLM só explica; a rota citada é
+                  validada e trajetos fora da base são recusados.
 """
 
 import json
@@ -28,8 +29,8 @@ from . import llm
 from .busca import STOPWORDS_PT, normalizar
 
 RAIZ = Path(__file__).resolve().parent.parent
-DADOS = json.loads((RAIZ / "base" / "vias_simuladas.json").read_text(encoding="utf-8"))
-VIAS, LOCAIS, ROTAS = DADOS["vias"], DADOS["locais"], DADOS["rotas"]
+DADOS = json.loads((RAIZ / "base" / "calcadas_simuladas.json").read_text(encoding="utf-8"))
+TRECHOS, LOCAIS, ROTAS = DADOS["trechos"], DADOS["locais"], DADOS["rotas"]
 FONTE = DADOS["fonte"]
 RECUSA = {"resposta": "não consta", "rota_id": None, "confianca": 0.0}
 
@@ -40,31 +41,36 @@ def nome_local(loc_id):
     return LOCAIS[loc_id]["nome"]
 
 
+def nomes_trechos(r):
+    return [TRECHOS[t]["nome"] for t in r["trechos"]]
+
+
 def rotas_do_trajeto(origem, destino):
-    """Rotas da base para o par (em qualquer sentido), da melhor para a pior."""
+    """Rotas do par (qualquer sentido): acessíveis primeiro (menor índice), bloqueadas depois."""
     lst = [r for r in ROTAS if {r["origem"], r["destino"]} == {origem, destino}]
-    return sorted(lst, key=lambda r: (r["indice"], r["km"]))
+    return sorted(lst, key=lambda r: (not r["acessivel"], r["indice"], r["metros"]))
 
 
 def descrever_rota(r):
-    nomes = " → ".join(VIAS[v]["nome"] for v in r["vias"])
-    return (f"Rota {r['id']} de {nome_local(r['origem'])} até {nome_local(r['destino'])} "
-            f"(vale nos dois sentidos): via {nomes}. Distância {r['km']} km, {r['buracos']} buracos "
-            f"abertos, {r['graves']} graves, índice de buracos {r['indice']} por km.")
+    situacao = ("ACESSÍVEL para cadeira de rodas" if r["acessivel"]
+                else "BLOQUEADA para cadeira de rodas: " + "; ".join(r["bloqueios"]))
+    return (f"Rota {r['id']} a pé de {nome_local(r['origem'])} até {nome_local(r['destino'])} "
+            f"(vale nos dois sentidos): por {' → '.join(nomes_trechos(r))}. {r['metros']} m, "
+            f"{r['buracos']} buracos na calçada, {r['obstaculos']} obstáculos, índice {r['indice']} por 100 m. "
+            f"{situacao}.")
 
 
 def extrair_trajeto(pergunta):
     """Encontra origem e destino citados na pergunta (ordem de aparição)."""
     q = " " + re.sub(r"[^a-z0-9 ]", " ", normalizar(pergunta)) + " "
+    q = re.sub(r" +", " ", q)
     achados = []
     for loc_id, info in LOCAIS.items():
         pos = [q.find(" " + a + " ") for a in info["apelidos"] if q.find(" " + a + " ") >= 0]
         if pos:
             achados.append((min(pos), loc_id))
-    achados = [loc for _, loc in sorted(achados)]
-    # remove duplicatas mantendo a ordem
     vistos = []
-    for loc in achados:
+    for _, loc in sorted(achados):
         if loc not in vistos:
             vistos.append(loc)
     if len(vistos) < 2:
@@ -88,7 +94,8 @@ def buscar_rotas(pergunta, k=6):
 
 # ------------------------------------------------------------------ as 3 configurações
 
-SISTEMA = ("Você é o assistente de rotas do Rota Livre, que recomenda em São Paulo o caminho com MENOS BURACOS. "
+SISTEMA = ("Você é o assistente de rotas acessíveis do Rota Livre, que recomenda em São Paulo o caminho a pé "
+           "pela calçada para pessoas em cadeira de rodas ou com mobilidade reduzida. "
            "Responda SEMPRE em português e SOMENTE com um JSON válido no formato "
            '{"resposta": "...", "rota_id": "...", "confianca": 0.0}. ')
 REGRA_RECUSA = ('Se não houver dados sobre esse trajeto, devolva exatamente '
@@ -107,10 +114,11 @@ def rag(pergunta):
     passos = ["busca top-6: " + ", ".join(f"{r['id']}={s:.2f}" for r, _, s in res)]
     trechos = "\n".join(f"[{r['id']}] {t}" for r, t, _ in res)
     saida = llm.conversar([
-        {"role": "system", "content": SISTEMA + "Use APENAS os dados fornecidos. Compare o índice de buracos: "
-         "o menor índice é a melhor rota. Em 'rota_id' coloque o id da rota escolhida. " + REGRA_RECUSA},
+        {"role": "system", "content": SISTEMA + "Use APENAS os dados fornecidos. NUNCA recomende rota BLOQUEADA para cadeira de rodas. "
+         "Entre as rotas ACESSÍVEIS do trajeto pedido, escolha a de menor índice. "
+         "Em 'rota_id' coloque o id da rota escolhida. " + REGRA_RECUSA},
         {"role": "user", "content": f"Dados (simulados) de rotas:\n{trechos}\n\nPergunta: {pergunta}"}])
-    passos.append("a LLM comparou os números dos trechos recuperados")
+    passos.append("a LLM decidiu sozinha (bloqueios e números) com os trechos recuperados")
     return {"config": "rag", "json": llm.extrair_json(saida), "ranking": [], "passos": passos}
 
 
@@ -126,19 +134,28 @@ def agente(pergunta):
     if not ranking:
         passos.append("esse trajeto não existe na base de rotas: recusa")
         return {"config": "agente", "json": dict(RECUSA), "ranking": [], "passos": passos}
-    passos.append("ferramenta de ranking: " + " < ".join(f"{r['id']} ({r['indice']})" for r in ranking))
-    melhor = ranking[0]
+    bloq = [r["id"] for r in ranking if not r["acessivel"]]
+    passos.append("ferramenta: rotas bloqueadas excluídas: " + (", ".join(bloq) or "nenhuma"))
+    acess = [r for r in ranking if r["acessivel"]]
+    if not acess:
+        passos.append("nenhuma rota acessível nesse trajeto: recusa")
+        return {"config": "agente", "json": {"resposta": "não consta rota acessível para esse trajeto",
+                "rota_id": None, "confianca": 0.0}, "ranking": ranking, "passos": passos}
+    passos.append("ferramenta: ranking das acessíveis: " + " < ".join(f"{r['id']} ({r['indice']})" for r in acess))
+    melhor = acess[0]
     tabela = "\n".join(f"{i+1}. {descrever_rota(r)}" for i, r in enumerate(ranking))
     saida = llm.conversar([
         {"role": "system", "content": SISTEMA + "O ranking abaixo já foi calculado e está correto. Explique em 1 ou 2 "
-         "frases por que a rota 1 é a melhor, citando as vias, os buracos e a distância. "
+         "frases por que a rota 1 é a melhor para quem usa cadeira de rodas, citando as ruas, os buracos e "
+         "obstáculos e a distância, e diga por que as rotas bloqueadas foram descartadas. "
          f"Use rota_id = \"{melhor['id']}\"."},
         {"role": "user", "content": f"Pergunta: {pergunta}\n\nRanking (dados simulados):\n{tabela}"}])
     obj = llm.extrair_json(saida)
     if obj is None or "resposta" not in obj:
         passos.append("JSON inválido da LLM: resposta montada pela ferramenta")
-        obj = {"resposta": f"A melhor rota é via {' → '.join(VIAS[v]['nome'] for v in melhor['vias'])}: "
-                           f"{melhor['buracos']} buracos em {melhor['km']} km.", "rota_id": melhor["id"], "confianca": 0.9}
+        obj = {"resposta": f"Vá por {' → '.join(nomes_trechos(melhor))}: rota acessível, {melhor['metros']} m, "
+                           f"{melhor['buracos']} buracos e {melhor['obstaculos']} obstáculos.",
+               "rota_id": melhor["id"], "confianca": 0.9}
     if obj.get("rota_id") != melhor["id"]:
         passos.append(f"rota citada ({obj.get('rota_id')!r}) diferente do topo do ranking: corrigida para {melhor['id']}")
         obj["rota_id"] = melhor["id"]
@@ -153,8 +170,8 @@ def responder(pergunta, modo="agente"):
     r = CONFIGURACOES.get(modo, agente)(pergunta)
     rid = (r["json"] or {}).get("rota_id")
     rota = next((x for x in ROTAS if x["id"] == rid), None)
-    r["rota"] = ({**rota, "vias_nomes": [VIAS[v]["nome"] for v in rota["vias"]], "fonte": FONTE} if rota else None)
-    r["ranking"] = [{**x, "vias_nomes": [VIAS[v]["nome"] for v in x["vias"]]} for x in r["ranking"]]
+    r["rota"] = ({**rota, "trechos_nomes": nomes_trechos(rota), "fonte": FONTE} if rota else None)
+    r["ranking"] = [{**x, "trechos_nomes": nomes_trechos(x)} for x in r["ranking"]]
     return r
 
 
@@ -186,6 +203,7 @@ def avaliar():
         resp = [e for e in execs if e["tipo"] == "respondivel"]
         nc = [e for e in execs if e["tipo"] == "nao_consta"]
         ids = {r["id"] for r in ROTAS}
+        BLOQ = {r["id"] for r in ROTAS if not r["acessivel"]}
         respondidos = [e for e in resp if e["json"] and not _recusou(e["json"])]
         resultados[nome] = {
             "metricas": {
@@ -194,6 +212,8 @@ def avaliar():
                 "recusa_correta": round(sum(e["correto"] for e in nc) / len(nc), 3),
                 "alucinacao": round(sum(1 for e in nc if e["json"] and not _recusou(e["json"])) / len(nc), 3),
                 "json_valido": round(sum(1 for e in execs if e["json"] is not None) / len(execs), 3),
+                "recomendou_bloqueada": round(sum(1 for e in respondidos if e["json"].get("rota_id") in BLOQ)
+                                              / len(respondidos), 3) if respondidos else 0.0,
                 "rota_existente": round(sum(1 for e in respondidos if e["json"].get("rota_id") in ids)
                                         / len(respondidos), 3) if respondidos else 0.0,
                 "tempo_medio_s": round(sum(e["duracao_s"] for e in execs) / len(execs), 1),
@@ -202,14 +222,14 @@ def avaliar():
         }
     (RAIZ / "avaliacao" / "rotas_resultados.json").write_text(
         json.dumps(resultados, ensure_ascii=False, indent=2), encoding="utf-8")
-    linhas = ["# Placar — rotas com menos buracos", "",
+    linhas = ["# Placar — rotas acessíveis (cadeira de rodas)", "",
               f"{len(casos)} casos ({sum(c['tipo'] == 'respondivel' for c in casos)} trajetos da base, "
               f"{sum(c['tipo'] == 'nao_consta' for c in casos)} fora da base) · dados simulados", "",
-              "| Configuração | Acerto da rota | Recusa correta | Alucinação ↓ | JSON válido | Rota citada existe | Tempo médio (s) |",
-              "|---|---|---|---|---|---|---|"]
+              "| Configuração | Acerto da rota | Recomendou rota bloqueada ↓ | Recusa correta | Alucinação ↓ | JSON válido | Rota citada existe | Tempo médio (s) |",
+              "|---|---|---|---|---|---|---|---|"]
     for n, r in resultados.items():
         m = r["metricas"]
-        linhas.append(f"| {n} | {m['acerto_rota']:.0%} | {m['recusa_correta']:.0%} | {m['alucinacao']:.0%} | "
+        linhas.append(f"| {n} | {m['acerto_rota']:.0%} | {m['recomendou_bloqueada']:.0%} | {m['recusa_correta']:.0%} | {m['alucinacao']:.0%} | "
                       f"{m['json_valido']:.0%} | {m['rota_existente']:.0%} | {m['tempo_medio_s']} |")
     (RAIZ / "avaliacao" / "rotas_placar.md").write_text("\n".join(linhas), encoding="utf-8")
     print("\nPlacar salvo em avaliacao/rotas_placar.md")
@@ -221,7 +241,7 @@ if __name__ == "__main__":
     if sys.argv[1:] == ["avaliar"]:
         avaliar()
     else:
-        p = " ".join(sys.argv[1:]) or "Qual o caminho com menos buracos da Sé até Pinheiros?"
+        p = " ".join(sys.argv[1:]) or "Qual o caminho acessível do Metrô Sé até o Theatro Municipal?"
         for modo in CONFIGURACOES:
             r = responder(p, modo)
             print(f"\n== {modo} ==\n" + json.dumps(r["json"], ensure_ascii=False, indent=2))

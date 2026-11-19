@@ -1,0 +1,660 @@
+{
+ "aviso": "DADOS SIMULADOS para o MVP Rota Livre. As ruas existem, mas as condições das calçadas (buracos, obstáculos, rampas, inclinação e largura) foram geradas para demonstração e NÃO representam a situação real. Em produção, viriam dos relatos do app, do SP156 e de vistorias.",
+ "fonte": "Base simulada de calçadas — Rota Livre (nov/2026)",
+ "regras": {
+  "inclinacao_max_pct": 8.33,
+  "largura_min_m": 0.9,
+  "explicacao": "Para cadeira de rodas, a rota é BLOQUEADA se tiver escada, travessia sem rampa (guia rebaixada), inclinação acima de 8,33% (limite de rampa da NBR 9050) ou passagem com menos de 0,90 m. Entre as rotas acessíveis, vence a de menor índice = (buracos + obstáculos) a cada 100 m."
+ },
+ "trechos": {
+  "paulista_par": {
+   "nome": "Av. Paulista, calçada lado par",
+   "metros": 650,
+   "buracos": 2,
+   "obstaculos": 1,
+   "travessias_sem_rampa": 0,
+   "inclinacao_max_pct": 2,
+   "largura_min_m": 4.0,
+   "escada": false
+  },
+  "paulista_impar": {
+   "nome": "Av. Paulista, calçada lado ímpar",
+   "metros": 650,
+   "buracos": 4,
+   "obstaculos": 5,
+   "travessias_sem_rampa": 0,
+   "inclinacao_max_pct": 2,
+   "largura_min_m": 3.0,
+   "escada": false
+  },
+  "al_santos": {
+   "nome": "Alameda Santos",
+   "metros": 520,
+   "buracos": 1,
+   "obstaculos": 0,
+   "travessias_sem_rampa": 1,
+   "inclinacao_max_pct": 3,
+   "largura_min_m": 1.5,
+   "escada": false
+  },
+  "itapeva": {
+   "nome": "Rua Itapeva",
+   "metros": 180,
+   "buracos": 0,
+   "obstaculos": 0,
+   "travessias_sem_rampa": 0,
+   "inclinacao_max_pct": 4,
+   "largura_min_m": 1.4,
+   "escada": false
+  },
+  "rua_direita": {
+   "nome": "Rua Direita",
+   "metros": 300,
+   "buracos": 5,
+   "obstaculos": 4,
+   "travessias_sem_rampa": 0,
+   "inclinacao_max_pct": 3,
+   "largura_min_m": 2.5,
+   "escada": false
+  },
+  "viaduto_cha": {
+   "nome": "Viaduto do Chá",
+   "metros": 250,
+   "buracos": 1,
+   "obstaculos": 1,
+   "travessias_sem_rampa": 0,
+   "inclinacao_max_pct": 1,
+   "largura_min_m": 5.0,
+   "escada": false
+  },
+  "libero": {
+   "nome": "Rua Líbero Badaró",
+   "metros": 380,
+   "buracos": 3,
+   "obstaculos": 2,
+   "travessias_sem_rampa": 0,
+   "inclinacao_max_pct": 4,
+   "largura_min_m": 1.8,
+   "escada": false
+  },
+  "xv_nov": {
+   "nome": "Rua XV de Novembro",
+   "metros": 260,
+   "buracos": 1,
+   "obstaculos": 1,
+   "travessias_sem_rampa": 0,
+   "inclinacao_max_pct": 2,
+   "largura_min_m": 3.0,
+   "escada": false
+  },
+  "escadaria_anh": {
+   "nome": "Escadaria do Anhangabaú",
+   "metros": 90,
+   "buracos": 0,
+   "obstaculos": 0,
+   "travessias_sem_rampa": 0,
+   "inclinacao_max_pct": 100,
+   "largura_min_m": 3.0,
+   "escada": true
+  },
+  "fl_calcadao": {
+   "nome": "Av. Brig. Faria Lima, calçadão",
+   "metros": 450,
+   "buracos": 2,
+   "obstaculos": 2,
+   "travessias_sem_rampa": 0,
+   "inclinacao_max_pct": 2,
+   "largura_min_m": 4.0,
+   "escada": false
+  },
+  "teodoro_tr": {
+   "nome": "Rua Teodoro Sampaio (trecho)",
+   "metros": 400,
+   "buracos": 7,
+   "obstaculos": 5,
+   "travessias_sem_rampa": 0,
+   "inclinacao_max_pct": 5,
+   "largura_min_m": 1.3,
+   "escada": false
+  },
+  "cardeal": {
+   "nome": "Rua Cardeal Arcoverde (trecho)",
+   "metros": 300,
+   "buracos": 2,
+   "obstaculos": 1,
+   "travessias_sem_rampa": 1,
+   "inclinacao_max_pct": 3,
+   "largura_min_m": 1.6,
+   "escada": false
+  },
+  "butanta": {
+   "nome": "Rua Butantã",
+   "metros": 350,
+   "buracos": 3,
+   "obstaculos": 1,
+   "travessias_sem_rampa": 0,
+   "inclinacao_max_pct": 3,
+   "largura_min_m": 1.5,
+   "escada": false
+  },
+  "jaguaribe": {
+   "nome": "Rua Jaguaribe",
+   "metros": 300,
+   "buracos": 4,
+   "obstaculos": 2,
+   "travessias_sem_rampa": 0,
+   "inclinacao_max_pct": 6,
+   "largura_min_m": 1.4,
+   "escada": false
+  },
+  "arouche": {
+   "nome": "Largo do Arouche",
+   "metros": 250,
+   "buracos": 1,
+   "obstaculos": 2,
+   "travessias_sem_rampa": 0,
+   "inclinacao_max_pct": 2,
+   "largura_min_m": 4.0,
+   "escada": false
+  },
+  "vieira_carv": {
+   "nome": "Av. Vieira de Carvalho",
+   "metros": 280,
+   "buracos": 1,
+   "obstaculos": 1,
+   "travessias_sem_rampa": 0,
+   "inclinacao_max_pct": 2,
+   "largura_min_m": 3.0,
+   "escada": false
+  },
+  "sao_joao_tr": {
+   "nome": "Av. São João (trecho)",
+   "metros": 500,
+   "buracos": 3,
+   "obstaculos": 3,
+   "travessias_sem_rampa": 0,
+   "inclinacao_max_pct": 2,
+   "largura_min_m": 3.5,
+   "escada": false
+  },
+  "ipiranga_tr": {
+   "nome": "Av. Ipiranga (trecho)",
+   "metros": 300,
+   "buracos": 2,
+   "obstaculos": 2,
+   "travessias_sem_rampa": 0,
+   "inclinacao_max_pct": 2,
+   "largura_min_m": 3.0,
+   "escada": false
+  },
+  "amaral_tr": {
+   "nome": "Rua Amaral Gurgel (trecho)",
+   "metros": 600,
+   "buracos": 2,
+   "obstaculos": 1,
+   "travessias_sem_rampa": 2,
+   "inclinacao_max_pct": 3,
+   "largura_min_m": 0.8,
+   "escada": false
+  },
+  "brig_descida": {
+   "nome": "Av. Brig. Luís Antônio (descida)",
+   "metros": 900,
+   "buracos": 3,
+   "obstaculos": 2,
+   "travessias_sem_rampa": 0,
+   "inclinacao_max_pct": 9.5,
+   "largura_min_m": 2.0,
+   "escada": false
+  },
+  "manoel_nobrega": {
+   "nome": "Rua Manuel da Nóbrega",
+   "metros": 900,
+   "buracos": 4,
+   "obstaculos": 3,
+   "travessias_sem_rampa": 0,
+   "inclinacao_max_pct": 6,
+   "largura_min_m": 1.5,
+   "escada": false
+  },
+  "rep_libano": {
+   "nome": "Av. República do Líbano",
+   "metros": 600,
+   "buracos": 2,
+   "obstaculos": 1,
+   "travessias_sem_rampa": 0,
+   "inclinacao_max_pct": 3,
+   "largura_min_m": 2.0,
+   "escada": false
+  },
+  "abilio_soares": {
+   "nome": "Rua Abílio Soares",
+   "metros": 1200,
+   "buracos": 6,
+   "obstaculos": 4,
+   "travessias_sem_rampa": 0,
+   "inclinacao_max_pct": 5,
+   "largura_min_m": 1.2,
+   "escada": false
+  },
+  "pedro_alvares": {
+   "nome": "Av. Pedro Álvares Cabral",
+   "metros": 400,
+   "buracos": 1,
+   "obstaculos": 1,
+   "travessias_sem_rampa": 0,
+   "inclinacao_max_pct": 2,
+   "largura_min_m": 3.0,
+   "escada": false
+  },
+  "rampa_vale": {
+   "nome": "Rampa de acesso ao Vale do Anhangabaú",
+   "metros": 200,
+   "buracos": 0,
+   "obstaculos": 1,
+   "travessias_sem_rampa": 0,
+   "inclinacao_max_pct": 7,
+   "largura_min_m": 3.0,
+   "escada": false
+  },
+  "escadaria_band": {
+   "nome": "Escadaria da Praça da Bandeira",
+   "metros": 60,
+   "buracos": 0,
+   "obstaculos": 0,
+   "travessias_sem_rampa": 0,
+   "inclinacao_max_pct": 100,
+   "largura_min_m": 4.0,
+   "escada": true
+  },
+  "anhangabau_pl": {
+   "nome": "Vale do Anhangabaú, calçadão",
+   "metros": 300,
+   "buracos": 1,
+   "obstaculos": 0,
+   "travessias_sem_rampa": 0,
+   "inclinacao_max_pct": 1,
+   "largura_min_m": 10.0,
+   "escada": false
+  },
+  "dr_falcao": {
+   "nome": "Rua Dr. Falcão Filho",
+   "metros": 280,
+   "buracos": 6,
+   "obstaculos": 3,
+   "travessias_sem_rampa": 0,
+   "inclinacao_max_pct": 5,
+   "largura_min_m": 1.1,
+   "escada": false
+  }
+ },
+ "locais": {
+  "consolacao": {
+   "nome": "Metrô Consolação",
+   "apelidos": [
+    "metro consolacao",
+    "consolacao"
+   ]
+  },
+  "masp": {
+   "nome": "MASP (Av. Paulista)",
+   "apelidos": [
+    "masp"
+   ]
+  },
+  "se": {
+   "nome": "Metrô Sé",
+   "apelidos": [
+    "metro se",
+    "praca da se",
+    "da se",
+    "na se",
+    "a se"
+   ]
+  },
+  "municipal": {
+   "nome": "Theatro Municipal",
+   "apelidos": [
+    "theatro municipal",
+    "teatro municipal",
+    "municipal"
+   ]
+  },
+  "farialima": {
+   "nome": "Metrô Faria Lima",
+   "apelidos": [
+    "metro faria lima",
+    "faria lima"
+   ]
+  },
+  "batata": {
+   "nome": "Largo da Batata",
+   "apelidos": [
+    "largo da batata",
+    "batata"
+   ]
+  },
+  "santacecilia": {
+   "nome": "Metrô Santa Cecília",
+   "apelidos": [
+    "metro santa cecilia",
+    "santa cecilia"
+   ]
+  },
+  "republica": {
+   "nome": "Praça da República",
+   "apelidos": [
+    "praca da republica",
+    "republica"
+   ]
+  },
+  "brigadeiro": {
+   "nome": "Metrô Brigadeiro",
+   "apelidos": [
+    "metro brigadeiro",
+    "brigadeiro"
+   ]
+  },
+  "ibirapuera": {
+   "nome": "Parque Ibirapuera",
+   "apelidos": [
+    "parque ibirapuera",
+    "ibirapuera"
+   ]
+  },
+  "bandeira": {
+   "nome": "Terminal Bandeira",
+   "apelidos": [
+    "terminal bandeira",
+    "bandeira"
+   ]
+  },
+  "anhangabau": {
+   "nome": "Vale do Anhangabaú",
+   "apelidos": [
+    "vale do anhangabau",
+    "anhangabau"
+   ]
+  }
+ },
+ "rotas": [
+  {
+   "id": "consolacao-masp-A",
+   "origem": "consolacao",
+   "destino": "masp",
+   "trechos": [
+    "paulista_impar"
+   ],
+   "metros": 650,
+   "buracos": 4,
+   "obstaculos": 5,
+   "acessivel": true,
+   "bloqueios": [],
+   "indice": 1.38
+  },
+  {
+   "id": "consolacao-masp-B",
+   "origem": "consolacao",
+   "destino": "masp",
+   "trechos": [
+    "al_santos",
+    "itapeva"
+   ],
+   "metros": 700,
+   "buracos": 1,
+   "obstaculos": 0,
+   "acessivel": false,
+   "bloqueios": [
+    "1 travessia(s) sem rampa em Alameda Santos"
+   ],
+   "indice": 0.14
+  },
+  {
+   "id": "consolacao-masp-C",
+   "origem": "consolacao",
+   "destino": "masp",
+   "trechos": [
+    "paulista_par"
+   ],
+   "metros": 650,
+   "buracos": 2,
+   "obstaculos": 1,
+   "acessivel": true,
+   "bloqueios": [],
+   "indice": 0.46
+  },
+  {
+   "id": "se-municipal-A",
+   "origem": "se",
+   "destino": "municipal",
+   "trechos": [
+    "rua_direita",
+    "viaduto_cha"
+   ],
+   "metros": 550,
+   "buracos": 6,
+   "obstaculos": 5,
+   "acessivel": true,
+   "bloqueios": [],
+   "indice": 2.0
+  },
+  {
+   "id": "se-municipal-B",
+   "origem": "se",
+   "destino": "municipal",
+   "trechos": [
+    "xv_nov",
+    "escadaria_anh"
+   ],
+   "metros": 350,
+   "buracos": 1,
+   "obstaculos": 1,
+   "acessivel": false,
+   "bloqueios": [
+    "escada em Escadaria do Anhangabaú"
+   ],
+   "indice": 0.57
+  },
+  {
+   "id": "se-municipal-C",
+   "origem": "se",
+   "destino": "municipal",
+   "trechos": [
+    "libero",
+    "viaduto_cha"
+   ],
+   "metros": 630,
+   "buracos": 4,
+   "obstaculos": 3,
+   "acessivel": true,
+   "bloqueios": [],
+   "indice": 1.11
+  },
+  {
+   "id": "farialima-batata-A",
+   "origem": "farialima",
+   "destino": "batata",
+   "trechos": [
+    "fl_calcadao"
+   ],
+   "metros": 450,
+   "buracos": 2,
+   "obstaculos": 2,
+   "acessivel": true,
+   "bloqueios": [],
+   "indice": 0.89
+  },
+  {
+   "id": "farialima-batata-B",
+   "origem": "farialima",
+   "destino": "batata",
+   "trechos": [
+    "teodoro_tr"
+   ],
+   "metros": 400,
+   "buracos": 7,
+   "obstaculos": 5,
+   "acessivel": true,
+   "bloqueios": [],
+   "indice": 3.0
+  },
+  {
+   "id": "farialima-batata-C",
+   "origem": "farialima",
+   "destino": "batata",
+   "trechos": [
+    "cardeal",
+    "butanta"
+   ],
+   "metros": 650,
+   "buracos": 5,
+   "obstaculos": 2,
+   "acessivel": false,
+   "bloqueios": [
+    "1 travessia(s) sem rampa em Rua Cardeal Arcoverde (trecho)"
+   ],
+   "indice": 1.08
+  },
+  {
+   "id": "santacecilia-republica-A",
+   "origem": "santacecilia",
+   "destino": "republica",
+   "trechos": [
+    "jaguaribe",
+    "arouche",
+    "vieira_carv"
+   ],
+   "metros": 830,
+   "buracos": 6,
+   "obstaculos": 5,
+   "acessivel": true,
+   "bloqueios": [],
+   "indice": 1.33
+  },
+  {
+   "id": "santacecilia-republica-B",
+   "origem": "santacecilia",
+   "destino": "republica",
+   "trechos": [
+    "sao_joao_tr",
+    "ipiranga_tr"
+   ],
+   "metros": 800,
+   "buracos": 5,
+   "obstaculos": 5,
+   "acessivel": true,
+   "bloqueios": [],
+   "indice": 1.25
+  },
+  {
+   "id": "santacecilia-republica-C",
+   "origem": "santacecilia",
+   "destino": "republica",
+   "trechos": [
+    "amaral_tr"
+   ],
+   "metros": 600,
+   "buracos": 2,
+   "obstaculos": 1,
+   "acessivel": false,
+   "bloqueios": [
+    "2 travessia(s) sem rampa em Rua Amaral Gurgel (trecho)",
+    "passagem de 0.8 m em Rua Amaral Gurgel (trecho) (mín. 0.9 m)"
+   ],
+   "indice": 0.5
+  },
+  {
+   "id": "brigadeiro-ibirapuera-A",
+   "origem": "brigadeiro",
+   "destino": "ibirapuera",
+   "trechos": [
+    "brig_descida"
+   ],
+   "metros": 900,
+   "buracos": 3,
+   "obstaculos": 2,
+   "acessivel": false,
+   "bloqueios": [
+    "inclinação de 9.5% em Av. Brig. Luís Antônio (descida) (máx. 8.33%)"
+   ],
+   "indice": 0.56
+  },
+  {
+   "id": "brigadeiro-ibirapuera-B",
+   "origem": "brigadeiro",
+   "destino": "ibirapuera",
+   "trechos": [
+    "manoel_nobrega",
+    "rep_libano"
+   ],
+   "metros": 1500,
+   "buracos": 6,
+   "obstaculos": 4,
+   "acessivel": true,
+   "bloqueios": [],
+   "indice": 0.67
+  },
+  {
+   "id": "brigadeiro-ibirapuera-C",
+   "origem": "brigadeiro",
+   "destino": "ibirapuera",
+   "trechos": [
+    "abilio_soares",
+    "pedro_alvares"
+   ],
+   "metros": 1600,
+   "buracos": 7,
+   "obstaculos": 5,
+   "acessivel": true,
+   "bloqueios": [],
+   "indice": 0.75
+  },
+  {
+   "id": "bandeira-anhangabau-A",
+   "origem": "bandeira",
+   "destino": "anhangabau",
+   "trechos": [
+    "escadaria_band",
+    "anhangabau_pl"
+   ],
+   "metros": 360,
+   "buracos": 1,
+   "obstaculos": 0,
+   "acessivel": false,
+   "bloqueios": [
+    "escada em Escadaria da Praça da Bandeira"
+   ],
+   "indice": 0.28
+  },
+  {
+   "id": "bandeira-anhangabau-B",
+   "origem": "bandeira",
+   "destino": "anhangabau",
+   "trechos": [
+    "rampa_vale",
+    "anhangabau_pl"
+   ],
+   "metros": 500,
+   "buracos": 1,
+   "obstaculos": 1,
+   "acessivel": true,
+   "bloqueios": [],
+   "indice": 0.4
+  },
+  {
+   "id": "bandeira-anhangabau-C",
+   "origem": "bandeira",
+   "destino": "anhangabau",
+   "trechos": [
+    "dr_falcao",
+    "anhangabau_pl"
+   ],
+   "metros": 580,
+   "buracos": 7,
+   "obstaculos": 3,
+   "acessivel": true,
+   "bloqueios": [],
+   "indice": 1.72
+  }
+ ]
+}

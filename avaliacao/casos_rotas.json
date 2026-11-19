@@ -1,97 +1,97 @@
 {
-  "descricao": "Casos de teste das rotas com menos buracos (dados simulados). O gabarito é a rota de menor índice de buracos do trajeto; trajetos fora da base devem ser recusados com 'não consta'.",
+  "descricao": "Casos de teste das rotas acessíveis para cadeira de rodas (dados simulados). O gabarito é a rota ACESSÍVEL de menor índice do trajeto; trajetos fora da base devem ser recusados com 'não consta'.",
   "casos": [
     {
       "id": "r01",
-      "pergunta": "Qual o caminho com menos buracos da Praça da Sé até Pinheiros?",
+      "pergunta": "Sou cadeirante. Qual o caminho acessível do Metrô Consolação até o MASP?",
       "tipo": "respondivel",
       "trajeto": [
-        "se",
-        "pinheiros"
+        "consolacao",
+        "masp"
       ],
-      "gabarito_rota": "se-pinheiros-C",
-      "gabarito": "Rota se-pinheiros-C de Praça da Sé (Centro) até Pinheiros (Largo da Batata) (vale nos dois sentidos): via Av. Brigadeiro Luís Antônio → Av. Paulista → Av. Sumaré → Rua Heitor Penteado. Distância 11.2 km, 32 buracos abertos, 6 graves, índice de buracos 3.39 por km."
+      "gabarito_rota": "consolacao-masp-C",
+      "gabarito": "Rota consolacao-masp-C a pé de Metrô Consolação até MASP (Av. Paulista) (vale nos dois sentidos): por Av. Paulista, calçada lado par. 650 m, 2 buracos na calçada, 1 obstáculos, índice 0.46 por 100 m. ACESSÍVEL para cadeira de rodas."
     },
     {
       "id": "r02",
-      "pergunta": "Vou da Avenida Paulista até o Parque Ibirapuera de moto, qual rota tem menos buracos?",
+      "pergunta": "Qual a melhor rota em cadeira de rodas do Metrô Sé até o Theatro Municipal?",
       "tipo": "respondivel",
       "trajeto": [
-        "paulista",
-        "ibirapuera"
+        "se",
+        "municipal"
       ],
-      "gabarito_rota": "paulista-ibirapuera-C",
-      "gabarito": "Rota paulista-ibirapuera-C de Av. Paulista (MASP) até Parque Ibirapuera (vale nos dois sentidos): via Rua da Consolação → Av. 23 de Maio. Distância 7.0 km, 21 buracos abertos, 5 graves, índice de buracos 3.71 por km."
+      "gabarito_rota": "se-municipal-C",
+      "gabarito": "Rota se-municipal-C a pé de Metrô Sé até Theatro Municipal (vale nos dois sentidos): por Rua Líbero Badaró → Viaduto do Chá. 630 m, 4 buracos na calçada, 3 obstáculos, índice 1.11 por 100 m. ACESSÍVEL para cadeira de rodas."
     },
     {
       "id": "r03",
-      "pergunta": "Qual a rota com menos buracos de Santana até o centro?",
+      "pergunta": "Uso cadeira de rodas: como vou do Metrô Faria Lima até o Largo da Batata?",
       "tipo": "respondivel",
       "trajeto": [
-        "santana",
-        "se"
+        "farialima",
+        "batata"
       ],
-      "gabarito_rota": "santana-se-B",
-      "gabarito": "Rota santana-se-B de Santana até Praça da Sé (Centro) (vale nos dois sentidos): via Av. Santos Dumont → Av. Tiradentes. Distância 5.6 km, 11 buracos abertos, 2 graves, índice de buracos 2.32 por km."
+      "gabarito_rota": "farialima-batata-A",
+      "gabarito": "Rota farialima-batata-A a pé de Metrô Faria Lima até Largo da Batata (vale nos dois sentidos): por Av. Brig. Faria Lima, calçadão. 450 m, 2 buracos na calçada, 2 obstáculos, índice 0.89 por 100 m. ACESSÍVEL para cadeira de rodas."
     },
     {
       "id": "r04",
-      "pergunta": "Do Tatuapé para a Paulista, qual caminho evita mais buracos?",
+      "pergunta": "Qual caminho acessível do Metrô Santa Cecília até a Praça da República?",
       "tipo": "respondivel",
       "trajeto": [
-        "tatuape",
-        "paulista"
+        "santacecilia",
+        "republica"
       ],
-      "gabarito_rota": "tatuape-paulista-C",
-      "gabarito": "Rota tatuape-paulista-C de Tatuapé até Av. Paulista (MASP) (vale nos dois sentidos): via Av. Salim Farah Maluf → Av. Paes de Barros → Rua Vergueiro. Distância 12.5 km, 26 buracos abertos, 5 graves, índice de buracos 2.48 por km."
+      "gabarito_rota": "santacecilia-republica-B",
+      "gabarito": "Rota santacecilia-republica-B a pé de Metrô Santa Cecília até Praça da República (vale nos dois sentidos): por Av. São João (trecho) → Av. Ipiranga (trecho). 800 m, 5 buracos na calçada, 5 obstáculos, índice 1.25 por 100 m. ACESSÍVEL para cadeira de rodas."
     },
     {
       "id": "r05",
-      "pergunta": "Saindo da Lapa para o Largo da Batata, qual rota tem menos buraco?",
+      "pergunta": "Minha mãe usa andador. Qual a rota mais segura do Metrô Brigadeiro até o Parque Ibirapuera?",
       "tipo": "respondivel",
       "trajeto": [
-        "lapa",
-        "pinheiros"
+        "brigadeiro",
+        "ibirapuera"
       ],
-      "gabarito_rota": "lapa-pinheiros-A",
-      "gabarito": "Rota lapa-pinheiros-A de Lapa até Pinheiros (Largo da Batata) (vale nos dois sentidos): via Av. Pompeia → Av. Sumaré → Rua Heitor Penteado. Distância 7.2 km, 19 buracos abertos, 3 graves, índice de buracos 3.06 por km."
+      "gabarito_rota": "brigadeiro-ibirapuera-B",
+      "gabarito": "Rota brigadeiro-ibirapuera-B a pé de Metrô Brigadeiro até Parque Ibirapuera (vale nos dois sentidos): por Rua Manuel da Nóbrega → Av. República do Líbano. 1500 m, 6 buracos na calçada, 4 obstáculos, índice 0.67 por 100 m. ACESSÍVEL para cadeira de rodas."
     },
     {
       "id": "r06",
-      "pergunta": "Qual o melhor caminho da Mooca até o Ibirapuera para fugir dos buracos?",
+      "pergunta": "Como chego de cadeira de rodas do Terminal Bandeira ao Vale do Anhangabaú?",
       "tipo": "respondivel",
       "trajeto": [
-        "mooca",
-        "ibirapuera"
+        "bandeira",
+        "anhangabau"
       ],
-      "gabarito_rota": "mooca-ibirapuera-B",
-      "gabarito": "Rota mooca-ibirapuera-B de Mooca até Parque Ibirapuera (vale nos dois sentidos): via Av. Alcântara Machado → Av. 23 de Maio. Distância 11.3 km, 24 buracos abertos, 5 graves, índice de buracos 2.57 por km."
+      "gabarito_rota": "bandeira-anhangabau-B",
+      "gabarito": "Rota bandeira-anhangabau-B a pé de Terminal Bandeira até Vale do Anhangabaú (vale nos dois sentidos): por Rampa de acesso ao Vale do Anhangabaú → Vale do Anhangabaú, calçadão. 500 m, 1 buracos na calçada, 1 obstáculos, índice 0.4 por 100 m. ACESSÍVEL para cadeira de rodas."
     },
     {
       "id": "r07",
-      "pergunta": "Qual rota tem menos buracos de Pinheiros até a Sé?",
+      "pergunta": "Qual a rota acessível do Theatro Municipal até o Metrô Sé?",
       "tipo": "respondivel",
       "trajeto": [
-        "pinheiros",
+        "municipal",
         "se"
       ],
-      "gabarito_rota": "se-pinheiros-C",
-      "gabarito": "Rota se-pinheiros-C de Praça da Sé (Centro) até Pinheiros (Largo da Batata) (vale nos dois sentidos): via Av. Brigadeiro Luís Antônio → Av. Paulista → Av. Sumaré → Rua Heitor Penteado. Distância 11.2 km, 32 buracos abertos, 6 graves, índice de buracos 3.39 por km."
+      "gabarito_rota": "se-municipal-C",
+      "gabarito": "Rota se-municipal-C a pé de Metrô Sé até Theatro Municipal (vale nos dois sentidos): por Rua Líbero Badaró → Viaduto do Chá. 630 m, 4 buracos na calçada, 3 obstáculos, índice 1.11 por 100 m. ACESSÍVEL para cadeira de rodas."
     },
     {
       "id": "r08",
-      "pergunta": "Do MASP até o Ibirapuera, por onde eu vou para pegar menos buraco?",
+      "pergunta": "Do MASP até o Metrô Consolação, por onde passo com cadeira de rodas?",
       "tipo": "respondivel",
       "trajeto": [
-        "paulista",
-        "ibirapuera"
+        "masp",
+        "consolacao"
       ],
-      "gabarito_rota": "paulista-ibirapuera-C",
-      "gabarito": "Rota paulista-ibirapuera-C de Av. Paulista (MASP) até Parque Ibirapuera (vale nos dois sentidos): via Rua da Consolação → Av. 23 de Maio. Distância 7.0 km, 21 buracos abertos, 5 graves, índice de buracos 3.71 por km."
+      "gabarito_rota": "consolacao-masp-C",
+      "gabarito": "Rota consolacao-masp-C a pé de Metrô Consolação até MASP (Av. Paulista) (vale nos dois sentidos): por Av. Paulista, calçada lado par. 650 m, 2 buracos na calçada, 1 obstáculos, índice 0.46 por 100 m. ACESSÍVEL para cadeira de rodas."
     },
     {
       "id": "r09",
-      "pergunta": "Qual o caminho com menos buracos de Guarulhos até Santo André?",
+      "pergunta": "Qual o caminho acessível do Shopping Eldorado até a Estação da Luz?",
       "tipo": "nao_consta",
       "trajeto": null,
       "gabarito_rota": null,
@@ -99,18 +99,18 @@
     },
     {
       "id": "r10",
-      "pergunta": "Qual rota tem menos buracos da Lapa até o Tatuapé?",
+      "pergunta": "Qual rota acessível do MASP até o Largo da Batata?",
       "tipo": "nao_consta",
       "trajeto": [
-        "lapa",
-        "tatuape"
+        "masp",
+        "batata"
       ],
       "gabarito_rota": null,
       "gabarito": "não consta"
     },
     {
       "id": "r11",
-      "pergunta": "Qual o caminho com menos buracos de Campinas até a Sé?",
+      "pergunta": "Sou cadeirante, como vou de Guarulhos até o Metrô Sé?",
       "tipo": "nao_consta",
       "trajeto": null,
       "gabarito_rota": null,
@@ -118,11 +118,11 @@
     },
     {
       "id": "r12",
-      "pergunta": "Qual rota da Mooca até Santana tem menos buracos?",
+      "pergunta": "Qual o caminho em cadeira de rodas do Parque Ibirapuera até o Vale do Anhangabaú?",
       "tipo": "nao_consta",
       "trajeto": [
-        "mooca",
-        "santana"
+        "ibirapuera",
+        "anhangabau"
       ],
       "gabarito_rota": null,
       "gabarito": "não consta"
